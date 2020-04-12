@@ -1,0 +1,35 @@
+body {
+  /* background: #F5F6FA; */
+  background: #fff;
+  font-family: sans-serif;
+  color: #363636;
+}
+
+.description {
+  background: #F9F9FA;
+  border: #F9F9FA;
+}
+
+.btn_course {
+  color: #363636;
+  transition: all 0.5s;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  /* text-align: center; */
+  vertical-align: middle;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.btn_course--light {
+  color: #363636;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+.btn_course--light:hover {
+  color: #363636;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
