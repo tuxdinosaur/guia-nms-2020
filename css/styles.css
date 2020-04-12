@@ -15,6 +15,15 @@ body {
   border-radius: 0.25rem;
 }
 
+.description__title {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.description__icon {
+  padding: 0 16px 0 0;
+}
+
 .btn_course {
   color: #363636;
   transition: all 0.5s;
