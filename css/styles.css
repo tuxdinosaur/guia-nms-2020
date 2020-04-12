@@ -5,9 +5,14 @@ body {
   color: #363636;
 }
 
+.icon {
+  font-size: 78px;
+}
+
 .description {
   background: #F9F9FA;
   border: #F9F9FA;
+  border-radius: 0.25rem;
 }
 
 .btn_course {
