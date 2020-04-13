@@ -1,9 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* background: #F5F6FA; */
   background: #fff;
   font-family: sans-serif;
   color: #363636;
+
+  position: relative;
 }
+
+p {
+  margin: 0;
+}
+
+/* INICIO */
 
 .icon {
   font-size: 78px;
@@ -22,6 +34,10 @@ body {
 
 .description__icon {
   padding: 0 16px 0 0;
+}
+
+.a__course:hover {
+  text-decoration: none;
 }
 
 .btn_course {
@@ -46,4 +62,76 @@ body {
   color: #363636;
     background-color: #e2e6ea;
     border-color: #dae0e5;
+}
+
+/* BACK TO HOME */
+
+.back-to-home {
+  margin-bottom: 20px;
+}
+
+/* LISTA DE CONTENIDO CURSO */
+
+.navbar {
+  padding: 0;
+}
+
+.content__title {
+  display: flex;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.content__icon {
+  padding: 0 16px 0 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #363636;
+    background-color: transparent;
+    border-left: 5px solid #363636;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+    color: #808080;
+}
+
+/* CONTENIDO CURSO */
+
+.icon-course {
+  font-size: 78px;
+  margin-bottom: 16px;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.subitem-title {
+  font-weight: bold;
+}
+
+.item-body {
+  background: #F8F9FA;
+  padding: 20px;
+  border-radius: 0.25rem;
+}
+
+.space-titles {
+  padding-bottom: 35px;
+}
+.space-subtitles {
+  padding-bottom: 25px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+
+  /* CONTENIDO CURSO */
+  .title-course {
+    font-size: 24px;
+  }
 }
