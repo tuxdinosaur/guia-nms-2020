@@ -85,10 +85,47 @@ p {
 
 /*** SIDEBAR ***/
 
+/* CONTINER TITLE COURSE */
+
+.container-title-course {
+  border: 1px solid #707477;
+  background: #707477;
+  padding: 20px;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.container-title-course--green {
+  border: 1px solid #16C60C;
+  background: #16C60C;
+}
+
+.container-title-course--yellow {
+  border: 1px solid #FFB900;
+  background: #FFB900;
+}
+
+.container-title-course--blue {
+  border: 1px solid #3A96DD;
+  background: #3A96DD;
+}
+
+.container-title-course--orange {
+  border: 1px solid #F7630C;
+  background: #F7630C;
+}
+
 /* BACK TO HOME */
 
 .back-to-home {
   margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+
+.back-to-home__text {
+  padding-left: 12px;
 }
 
 /* TITLE COURSE */
@@ -100,7 +137,6 @@ p {
 
 .title-course-sidebar {
   font-size: 24px;
-  margin-bottom: 15px;
 }
 
 /* CONTENT LIST */
@@ -108,7 +144,7 @@ p {
 .sidebar-content {
   background: #3F4447!important;
   border: #F9F9FA;
-  border-radius: 0.25rem;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .sidebar-content__title {
