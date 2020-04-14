@@ -157,11 +157,13 @@ p {
 .item-title {
   font-weight: bold;
   font-size: 32px;
+  padding: 0 20px 20px 20px;
 }
 
 .subitem-title {
   font-weight: bold;
   font-size: 24px;
+  padding-top: 24px;
 }
 
 .item-body {
@@ -176,12 +178,16 @@ p {
 }
 
 .space-subtitles {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
+
+  .title-home {
+    font-size: 28px;
+  }
 
   /* CONTENIDO CURSO */
   .title-course {
