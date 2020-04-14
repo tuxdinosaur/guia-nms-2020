@@ -14,6 +14,10 @@ body {
   position: relative;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 p {
   margin: 0;
 }
@@ -34,18 +38,18 @@ p {
   font-weight: bold;
 }
 
-.sidebar-content {
+.description {
   background: #3F4447;
-  border: #F9F9FA;
+  border: #3F4447;
   border-radius: 0.25rem;
 }
 
-.sidebar-content__title {
+.description__title {
   display: flex;
   margin-bottom: 16px;
 }
 
-.sidebar-content__icon {
+.description__icon {
   padding: 0 16px 0 0;
 }
 
