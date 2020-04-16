@@ -119,6 +119,11 @@ p {
   background: rgba(247, 99, 12, 0.55);
 }
 
+.container-title-course--brown {
+  border: 1px solid rgba(153, 80, 37, 0.55);
+  background: rgba(153, 80, 37, 0.55);
+}
+
 /* BACK TO HOME */
 
 .back-to-home {
