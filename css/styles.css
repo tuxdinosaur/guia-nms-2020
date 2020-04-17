@@ -207,13 +207,13 @@ p {
 
 .item-title {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
   padding: 20px;
 }
 
 .subitem-title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   padding-top: 24px;
 }
 
@@ -261,5 +261,11 @@ p {
 @media (min-width: 992px){
   .container, .container-lg, .container-md, .container-sm {
     max-width: 1200px;
+  }
+}
+
+@media (min-width: 1440px){
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 1400px;
   }
 }
