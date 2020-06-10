@@ -4,122 +4,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png">
+  <title>Guía NMS 2020</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- STYLES -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
-
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- TITLE -->
-  <title>Guía NMS 2020</title>
 </head>
 
 <body>
 
-  <div class="container mt-5">
+  <!-- HEADER -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12" style="background: #ECECEC;">
+        <header class="d-flex flex-column justify-content-center align-items-center py-4 py-md-5">
+          <div>
+            <h1 class="d-flex align-items-center mb-3">
+              <span class="icon-home mr-2 mr-md-3">📚</span>
+              <span class="title-home">Guía NMS 2020</span>
+            </h1>
+          </div>
+          <p class="mb-1">Guía de estudio IPN 2020.</p>
+          <a href="https://github.com/tuxdinosaur/guia-nms-2020" target="_blank">
+            Ver proyecto en GitHub
+          </a>
+        </header>
+      </div>
+    </div>
+  </div>
 
-    <header class="mb-3 mb-md-5">
-      <h1>
-        <span class="icon-home">📚</span>
-        <span class="title-home">Guía NMS 2020</span>
-      </h1>
-    </header>
+  <!--
+  <div>
+    <div>
+      <input id="user-name" type="text">
+      <p id="user-p"></p>
+    </div>  
 
+    <div>
+      <ul id="my-list">
+      </ul>
+    </div>
+  </div>
+  -->
+
+  <!-- CONTAINER -->
+  <div class="container mt-3 mt-md-5">
     <div class="row">
 
-      <div class="col-12 col-md-4 mb-3">
-        <div class="card description">
-          <div class="card-body">
-            <div class="description__title">
-              <span class="description__icon">ℹ</span>
-              <b>Acerca de</b>
-            </div>
-            <p>
-              Guía de estudio IPN.
-            </p>
-            <div class="mt-1">
-              <a href="https://github.com/tuxdinosaur/guia-nms-2020" target="_blank">
-                Consulta el repositorio en GitHub
-              </a>
-            </div>
+      <div class="col-12 col-md-6">
+        <a class="a__course" href="./courses/course_1/habilidad-razonamiento-matematico.html">
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Habilidad de Razonamiento Matemático</span>
           </div>
-        </div>
+        </a>
       </div>
 
-      <div class="col-12 col-md-8">
-
-        <a class="a__course" href="./courses/course_1/habilidad-razonamiento-matematico.html">
-          <div type="button" class="btn_course btn_course--light">
-            📒 Habilidad de Razonamiento Matemático
-          </div>
-        </a>
-
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_2/matematicas.html">
-          <div type="button" class="btn_course btn_course--light">
-            📗 Matemáticas
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📗</div>
+            <span>Matemáticas</span>
           </div>
         </a>
+      </div>
 
-        <a class="a__course" href="./courses/course_3/fisica.html">
-          <div type="button" class="btn_course btn_course--light">
-            📒 Física
+      <div class="col-12 col-md-6">
+        <a class="a__course" href="./courses/course_3/content.html">
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Física</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_4/biologia.html">
-          <div type="button" class="btn_course btn_course--light">
-            📒 Biología
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Biología</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_5/quimica.html">
-          <div type="button" class="btn_course btn_course--light">
-            📗 Química
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📗</div>
+            <span>Química</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_6/geografia.html">
-          <div type="button" class="btn_course btn_course--light">
-            📘 Geografía
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📘</div>
+            <span>Geografía</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_7/habilidad-razonamiento-verbal.html">
-          <div type="button" class="btn_course btn_course--light">
-            📒 Habilidad de Razonamiento Verbal
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Habilidad de Razonamiento Verbal</span>
           </div>
         </a>
+      </div>
 
-        <a class="a__course" href="./courses/course_8/espanol.html" >
-          <div type="button" class="btn_course btn_course--light">
-            📒 Español
+      <div class="col-12 col-md-6">
+        <a class="a__course" href="./courses/course_8/espanol.html">
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Español</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_9/historia-universal.html">
-          <div type="button" class="btn_course btn_course--light">
-            📘 Historia Universal
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📘</div>
+            <span>Historia Universal</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_10/historia-de-mexico.html">
-          <div type="button" class="btn_course btn_course--light">
-            📘 Historia de México
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📘</div>
+            <span>Historia de México</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_11/formacion-civica-etica.html">
-          <div type="button" class="btn_course btn_course--light">
-            📒 Formación Cívica y Ética
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📒</div>
+            <span>Formación Cívica y Ética</span>
           </div>
         </a>
+      </div>
 
+      <div class="col-12 col-md-6">
         <a class="a__course" href="./courses/course_base/course-name.html">
-          <div type="button" class="btn_course btn_course--light">
-            📓 Sample course
+          <div type="button" class="btn_course btn_course--light d-flex align-items-center">
+            <div class="mr-3">📓</div>
+            <span>Sample course</span>
           </div>
         </a>
 
@@ -127,7 +167,7 @@
     </div>
   </div>
 
-  <footer class="d-flex justify-content-center my-4">
+  <footer class="d-flex justify-content-center my-5">
     <b>//</b>
   </footer>
 
