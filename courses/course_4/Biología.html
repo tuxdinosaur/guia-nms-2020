@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Biología.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="biolog%C3%ADa">Biología</h1>
+<h2 id="tema-1-el-valor-de-la-biodiversidad">Tema 1. El Valor de la Biodiversidad</h2>
+<p>La biodiversidad o <strong>diversidad biológica</strong> se refiere a la extensa variedad de seres vivos existentes en el planeta, es también un sistema dinámico que está en evolución constante. Este término proviene de la contracción inglesa <strong>&quot;biological diversity&quot;</strong>, y se le atribuye <strong>Walter G. Rosen</strong> el cual lo mencionó por primera vez en una conferencia en 1986.<strong>La distribución de la biodiversidad</strong> viene como consecuencia de factores evolutivos en el área <strong>biológica, geográfica y ecológica,</strong> por consiguiente cada especie posee un entorno adecuado a sus necesidades en donde cada uno de estos pueden relacionarse de manera armoniosa con el medio que lo rodea.</p>
+<p>Entre los tipos de biodiversidad encontramos, <strong>la diversidad genética</strong>, la cual comprende la variación en los genes de una especie. Sucesivamente tenemos <strong>la diversidad de especie</strong>, la cual consiste en la cantidad de especies vivas que residen en un hábitat determinado. Luego está <strong>la diversidad ecológica</strong>, que es la variedad de ecosistemas o comunidades [biológicas]{.underline} existentes en un área y el último tipo de biodiversidad es la <strong>diversidad funcional</strong>, es la variedad de respuesta de las especies a los cambios ambientales.</p>
+<p>Una de las principales amenazas de la biodiversidad ha sido el mismo ser [humano]{.underline}, el cual por medio de sus acciones de deforestación, incendios y contaminación ha ocasionado daños que no solo afectan a las especies que habitan en esos lugares, sino que también han dañado al medio ambiente. Alguno de los daños han sido irreversibles como por ejemplo la [extinción]{.underline} de algunas especies, fragmentación y pérdida de los bosques, así como de arrecifes, entre otros.</p>
+<p>Para la preservación de la biodiversidad lo primero que hay que hacer es controlar la cantidad de individuos que habitan el área, dejar de realizar las actividades que pueden afectar los recursos naturales, también se tiene que proteger a todas las especies que se encuentran bajo amenazas de extinción y finalmente crear una conciencia de preservación del ambiente en cada individuo</p>
+<p>[http://conceptodefinicion.de/biodiversidad]{.underline}</p>
+<h3 id="11-caracter%C3%ADsticas-comunes-de-los-seres-vivos">1.1 Características comunes de los seres vivos</h3>
+<p>Los seres vivos se definen tradicionalmente como todos aquellos seres que se nutren, se relacionan y pueden reproducirse. Pero todos los seres vivos tienen otras características, además de las anteriores, que les son propias. Entre ellas podemos citar las siguientes:</p>
+<h2 id="1-organizaci%C3%B3n-y-complejidad"><em>1. Organización y Complejidad</em></h2>
+<p>Tal como lo expresa la <strong>TEORÍA CELULAR</strong> (uno de los conceptos unificadores de la biología) la unidad estructural de todos los organismos es la <strong>CÉLULA</strong>. La célula en sí tiene una organización específica, todas tienen tamaño y formas características por las cuales pueden ser reconocidas.</p>
+<p>Algunos organismos estás formados por una sola célula, llamados <strong>unicelulares</strong>, en contraste, los organismos complejos son <strong>multicelulares</strong>, en ellos los procesos biológicos dependen de la acción coordinada de las células...</p>
+<h2 id="2-crecimiento-y-desarrollo"><em>2. Crecimiento y desarrollo</em></h2>
+<p>En algún momento de su ciclo de vida TODOS los organismos crecen. En sentido biológico, <strong>crecimiento</strong> es el aumento del tamaño celular, del número de células o de ambas. Aún los organismos unicelulares crecen, las bacterias duplican su tamaño antes de dividirse nuevamente. El crecimiento puede durar toda la vida del organismo como en los árboles, o restringirse a cierta etapa y hasta cierta altura, como en la mayoría de los animales.</p>
+<h2 id="3-metabolismo"><em>3. Metabolismo</em></h2>
+<p>Los organismos necesitan materiales y energía para mantener su elevado grado de complejidad y organización, para crecer y reproducirse. Los átomos y moléculas que forman los organismos pueden obtenerse del aire, agua, del suelo o a partir de otros organismos. La suma de todas las reacciones químicas de la célula que permiten su crecimiento, conservación y reparación, recibe el nombre de metabolismo.</p>
+<h2 id="4-homeostasis"><em>4. Homeostasis</em></h2>
+<p>Las estructuras organizadas y complejas no se mantienen fácilmente, existe una tendencia natural a la pérdida del orden denominada <strong>entropía</strong>. Para mantenerse vivos y funcionar correctamente los organismos vivos deben mantener la constancia del medio interno de su cuerpo, proceso denominado homeostasis (del griego &quot;permanecer sin cambio&quot;).</p>
+<h2 id="5-irritabilidad"><em>5. Irritabilidad</em></h2>
+<p>Los seres vivos son capaces de detectar y responder a los estímulos que son los cambios físicos y químicos del medio ambiente, ya sea interno como externo. Entre los estímulos generales se cuentan: luz, presión, temperatura, composición química del suelo, agua o aire circundante, entre muchos otros.</p>
+<p><em><strong>6. Reproducción y herencia.</strong></em></p>
+<p>Dado que toda célula proviene de otra célula, debe existir alguna forma de reproducción, ya sea [asexual]{.underline} (sin recombinación de material genético) o [sexual]{.underline} (con recombinación de material genético).</p>
+<p>Si existe alguna característica que pueda mencionarse como la ESENCIA misma de la VIDA, es la capacidad de un organismo para reproducirse.</p>
+<p>[http://www.duiops.net/]{.underline}</p>
+<p>[http://www.biologia.edu.ar/introduccion/3intro.htm]{.underline}</p>
+<h3 id="12-aportaciones-de-darwin-para-explicar-la-evoluci%C3%B3n-de-los-seres-vivos">1.2 Aportaciones de Darwin para explicar la evolución de los seres vivos</h3>
+<p>Entre las principales aportaciones de Charles Darwin, destaca explicar la evolución de los seres vivos a partir de su planteamiento de la teoría evolutiva fundamentada en la selección natural.</p>
+<p>De esta manera, Darwin sostenía que todas las especies provienen de un mismo ancestro común, con el cual aún comparten ciertas características.</p>
+<p>Charles Darwin es conocido como el padre de la evolución gracias a sus contribuciones para establecer una única teoría lógica de la evolución.</p>
+<p>Su teoría ayudó a remover las antiguas convenciones y creencias que indicaban que la formación de varias especies era producto de un fenómeno súper natural ocasionado por un ser superior (Wood, 2005).</p>
+<p>La teoría evolutiva de Darwin sirvió a la ciencia para dar una explicación más racional sobre la formación y existencia de nuevas especies. Esto fue explicado gracias al concepto de selección natural, donde varias especies con un ancestro común únicamente pueden sobrevivir cuando se adaptan al medio, incluso cuando las condiciones de éste cambian.</p>
+<p>La selección natural fue explicada por Darwin como la capacidad que tienen los organismos de variar en el tiempo para adaptarse al medio.</p>
+<p>Aquellos cuyas variaciones son insignificantes tendrán menos probabilidades de adaptarse, mientras que los organismos cuyas variaciones les den una ventaja reproductiva, serán los supervivientes.</p>
+<p>Darwin no inventó ninguna teoría, simplemente descubrió múltiples fenómenos como científico y naturalista. Como autor, tuvo un impacto significativo en la ciencia y la manera como se entiende la biología y el mundo. Él desarrolló y propuso una teoría evolutiva que afectó enormemente la manera como la vida es entendida por la ciencia (Byjus, 2015)</p>
+<p>1- Sus viajes en el Beagle para investigar las especies</p>
+<p>Charles Darwin nació en Shrewsbury, Inglaterra en el año 1809. Cuando tenía 16 años estudió medicina en la Universidad de Edimburgo durante dos años, hasta que se dio cuenta de que esa no era su vocación. Fue así como se volcó a la educación teológica y se graduó en 1831 como teólogo.</p>
+<p>HMS Beagle</p>
+<p>Desde agosto de 1831 hasta 1836, Darwin participó como naturalista en un viaje científico a bordo del HMS Beagle, en el cual viajó por el mundo en un intento por estudiar varios aspectos de la ciencia y el mundo natural.</p>
+<p>Darwin contribuyó en numerosos estudios durante su estancia en el barco, enfocándose principalmente en plantas, animales y los aspectos naturales de la tierra.</p>
+<p>Unos años después de iniciar el viaje, publicó su primer gran trabajo sobre sus hallazgos, llamado Zoología del viaje del Beagle (Your Dictionary, 2017).</p>
+<h2 id="2-el-origen-de-las-especies">2. El origen de las especies</h2>
+<p>En su primer trabajo, Darwin ya daba a entender grosso modo algunos los que después serían sus mayores aportes a la ciencia.</p>
+<p>Sin embargo, sus teorías y descubrimientos no saldrían a la luz pública hasta el año 1859. Hasta este momento, Darwin había desarrollado la que posteriormente se conocería como &quot;Teoría de la evolución darwiniana&quot;. En 1859, el trabajo más famoso de Darwin (El origen de las Especies por medio de la selección natural) fue publicado. En este libro ilustraba la teoría por la que finalmente sería reconocido.</p>
+<p>Su argumento fue en esencia que todas las especies de seres vivos, incluyendo los humanos, se desarrollan y adaptan a lo largo del tiempo, modificándose para adaptarse a nuevos estilos de vida y ambientes.</p>
+<p>Ya no consideraba la vida como parte de diferentes líneas ancestrales, sino como parte de un solo árbol biológico que se ramifica una y otra vez.</p>
+<p>De esta manera, se puede explicar porque todos los seres vivos comparten características similares originarias de un mismo ancestro. Darwin sabía que, si la reproducción de las especies se daba sin supervisión, y crecía de forma geométrica, el mundo estaría sobrepoblado en generaciones futuras.</p>
+<p>Darwin pensaba que si el mundo no se encontraba sobrepoblado era porque algunas especies desaparecían y otras prevalecían en el tiempo.</p>
+<p>A esta teoría se le dio el nombre de selección natural, indicando que, las especies más fuertes tendrán más posibilidades de sobrevivir, mientras que, las especies más débiles y menos propensas a adaptarse, tienden a desaparecer (Darwin, 1998).</p>
+<h2 id="3--teor%C3%ADa-de-la-evoluci%C3%B3n">3- Teoría de la evolución</h2>
+<p>Para empezar, existe una diferencia importante entre la evolución y las teorías propuestas para explicar las causas y mecanismos de la misma.</p>
+<p>La evolución es definida como la conexión genealógica existente entre todos los organismos vivientes, basados en su descendencia de un ancestro común. Esta afirmación se basa en la evidencia.</p>
+<p>Primero, está la evidencia directa producto de la observación humana y la manipulación de especies de animales domésticos y plantas por cientos de años, con el objetivo de domesticar a ciertas especies salvajes y desarrollar mejores cultivos, mostrando la existencia de pequeños cambios graduales en el tiempo.</p>
+<p>Esto se puede ver claramente en las aves estudiadas por Darwin en las Islas Galápagos, las cuales presentaban cambios en la forma del pico debido a condiciones generales del medio ambiente, la disponibilidad de alimentos y la presencia de otras especies animales y de bacterias en el medio.</p>
+<p>Los cambios biológicos que tienen lugar en las especies pueden ser registrados y rastreados en hallazgos fósiles. De esta manera, los paleontólogos han encontrado múltiples evidencias y ejemplos de cambios secuenciales en la forma de nuestros ancestros en líneas vastas de tiempo (Stark Effects, 2017).</p>
+<p>Finalmente, la teoría de la evolución puede ser evidenciada cuando se encuentran características comunes entre diferentes especies, todas ellas provenientes de un ancestro común.</p>
+<p>En algunas ocasiones, estas similitudes solo pueden ser explicadas como rezagos o vestigios que permanecieron en las especies. De esta manera, Darwin creía que los seres humanos cuentan con una serie de características físicas que únicamente son posibles gracias a que estos vienen de un ancestro común: los peces.</p>
+<p>Desde los tiempos de Darwin, han sido estudiados múltiples mecanismos involucrados dentro del proceso evolutivo. De esta manera, se puede ver cómo han tenido diversas mutaciones que han contribuido a que el proceso de selección natural tenga lugar.</p>
+<h2 id="4--selecci%C3%B3n-natural">4- Selección natural</h2>
+<p>Selección natural es el nombre dado al proceso obvio que indica que unos organismos tienen más probabilidades de sobrevivir que otros. Esto se ocasiona gracias a una ventaja reproductiva que permite asegurar la permanencia de la especie en generaciones futuras.</p>
+<p>Sin embargo, estas ventajas generalmente tienen lugar de manera espontánea y no por elección de los organismos.</p>
+<p>La investigación de Darwin sobre selección natural durante su viaje permitió el planteamiento de su teoría de la evolución.</p>
+<p>Él examinó todas las áreas que visitó, incluyendo Sur América, las Islas Galápagos, África y las islas del océano Pacífico, manteniendo siempre un registro de sus observaciones (Browne, 1996).</p>
+<p>Darwin fue capaz de observar muchos fenómenos naturales como terremotos, erosiones, erupciones volcánicas, entre otros. De esta manera, pudo proponer las siguientes ideas en torno a la teoría de selección natural:</p>
+<h2 id="adaptaci%C3%B3n-de-las-especies">Adaptación de las especies</h2>
+<p>Todas las especies están en un constante proceso de evolución a lo largo del tiempo. En la medida en la que el ambiente cambia, las necesidades de los organismos también cambian y estos se ajustan a sus nuevos ambientes para poder sobrevivir.</p>
+<p>Este fenómeno de cambios dentro de un margen determinado de tiempo con el objetivo de sobrevivir es conocido como adaptación.</p>
+<p>De acuerdo a la teoría de Darwin, únicamente las especies que presentaban cambios superiores podían sobrevivir, mientras que las otras estaban condenadas a desaparecer. Estos cambios no implican necesariamente una mejora de las especies, simplemente les dan una ventaja para poder sobrevivir en un medio dado.</p>
+<h2 id="ancestro-com%C3%BAn">Ancestro Común</h2>
+<p>Casi todos los organismos comparten un ancestro común. De acuerdo a Darwin, todos los organismos compartían un solo ancestro común que con el tiempo fue evolucionando de diferentes formas, ramificando las especies.</p>
+<p>De esta manera, la teoría de la evolución de Darwin apoya a las teorías divergentes y convergentes de la evolución.</p>
+<h2 id="proceso-de-evoluci%C3%B3n">Proceso de Evolución</h2>
+<p>Darwin creía que la evolución es un proceso lento y gradual que tiene lugar durante un periodo largo de tiempo (billones de años).</p>
+<p>El cambio biológico de una generación a otra dentro de una misma especie puede tardar millones de años, ya que es un proceso lento de adaptación y estabilización.</p>
+<h2 id="5--tipos-de-selecci%C3%B3n-natural">5- Tipos de selección natural</h2>
+<p>La selección natural de acuerdo a Darwin tiene lugar de cuatro formas diferentes, como se indica a continuación: Variación</p>
+<p>Los cambios se acumularon durante un periodo de tiempo en un organismo, usualmente dando paso al nacimiento de una nueva especie. Herencia</p>
+<p>Las variaciones o cambios se pasan a lo largo de generaciones, llevando al desarrollo específico de las especies.</p>
+<p>Alto margen de crecimiento poblacional</p>
+<p>Esto permite la existencia de un mayor número de organismos con posibilidades reproductivas dentro de un ambiente que lo permita. Cuando una especie no puede reproducirse dentro de un ambiente dado, está condenada a la extinción.</p>
+<p>Supervivencia y reproducción diferencial</p>
+<p>Las variaciones o cambios superiores llevan a la supervivencia de un organismo particular y las variaciones inferiores llevan a la extinción. Las variaciones superiores son aquellas que se heredan durante la reproducción.</p>
+<h3 id="13-relaci%C3%B3n-entre-adaptaci%C3%B3n-y-selecci%C3%B3n-natural">1.3 Relación entre adaptación y selección natural</h3>
+<p>En el libro publicado por Darwin, &quot;El origen de las especies&quot; estableció que los seres vivos cambian de manera lenta y constante, y que estos pequeños cambios se heredan de generación en generación. Si las condiciones del ambiente son favorables en relación con los cambios, los organismos sobreviven. Darwin plantea que los individuos de una misma especie nacen con diferencias entre sí. Estas diferencias no son solo físicas, también funcionales y de comportamiento. Las características que los hacen diferentes intervienen como ventajas o desventajas.</p>
+<p>Los organismos con ventajas en determinado ambiente pueden dejar más descendencia que otros individuos con características distintas que se hallan en las mismas condiciones. A este mecanismo -que es la base de la evolución de la vida- por el cual las especies de seres vivos han evolucionado a partir de un ancestro común Darwin le llamó selección natural. Gracias a la selección natural, los organismos con más éxito reproductivo logran sobrevivir en mejores condiciones y desplazan a los que no pueden heredar su información a lo largo de generaciones.</p>
+<p>La razón por la cual algunos organismos de una población sobreviven y otros no, Darwin la encontró al observar las variaciones que presentan los individuos de una población: la forma del cuerpo, color, su fisiología y su comportamiento entre otras. Darwin llegó a la conclusión de que son los factores ambientales, como la falta de alimento y espacio los que impiden que las poblaciones crezcan sin control. Concluyó que las presiones que el ambiente ejerce sobre las poblaciones &quot;seleccionan&quot; de manera natural a los individuos más aptos para sobrevivir en las condiciones de su entorno y que ellos son los que pueden reproducirse y heredar sus características a sus descendientes; en otras palabras hay una reproducción diferencial. Las adaptaciones son cambios o modificaciones en una especie que favorecen su sobrevivencia y/o el éxito reproductivo de un organismo. Son resultado de la selección natural.</p>
+<p>La adaptación está relacionada con la diversidad de seres vivos, pues las distintas formas de vida presentan diferentes adaptaciones. Pero cuando las condiciones cambian y no son favorables, algunas especies se pueden extinguir. Las adaptaciones se manifiestan de diferentes maneras: Morfológicas: Modificación en la forma de las partes del cuerpo. Fisiológicas: Presentación de un cambio en el funcionamiento del organismo para resolver algún problema que se les presente en el ambiente. De comportamiento: Implican una modificación en el comportamiento de los organismos por diferentes causas...</p>
+<p>[http://www.acmor.org.mx/s]{.underline}</p>
+<p>Los pensamientos de Darwin sobre la evolución de los seres vivos se pueden reunir en <strong>cinco teorías</strong>:</p>
+<ol>
+<li>
+<p><strong>Evolución como tal</strong>. Los seres vivos están cambiando continuamente, no han sido creados recientemente ni están en un perpetuo ciclo.</p>
+</li>
+<li>
+<p><strong>Origen común</strong>. Cada conjunto de organismos desciende de un antecesor común y el conjunto de todos los seres vivos (plantas, animales, hongos, microorganismos,...) se remonta al único origen de la vida en la tierra.</p>
+</li>
+<li>
+<p><strong>Diversificación de las especies</strong>. La gran cantidad de especies existente se debe a que, de una misma especie, han surgido varias especies hijas por la formación de nuevas poblaciones aisladas geográficamente.</p>
+</li>
+<li>
+<p><strong>Gradualismo.</strong> La evolución tiene lugar mediante pequeños cambios en las poblaciones y no de manera saltacional.</p>
+</li>
+<li>
+<p><strong>Selección natural.</strong> Los seres vivos están adaptados a su entorno porque en un mundo donde los recursos son escasos, poseer un carácter que aumente la eficacia en su explotación da más oportunidades para dejar descendencia y, si este carácter es heredable, los hijos sobrevivirán mejor.</p>
+</li>
+</ol>
+<p>[http://www.conevyt.org.mx]{.underline}</p>
+<h3 id="14-caracter%C3%ADsticas-y-factores-de-riesgo-de-la-biodiversidad-en-m%C3%A9xico">1.4 Características y factores de riesgo de la biodiversidad en México</h3>
+<p>México es uno de los cinco países mega diversos del mundo. Su territorio alberga fauna y flora de dos regiones biogeográficas (neártica y neo tropical). Es un país tropical montañoso con un elevado número de endemismos, y presenta ambientes marinos templados en el Pacífico y tropicales en el Golfo de México y Caribe, todo lo cual significa que nuestro territorio es privilegiado en cuanto a la variedad de ecosistemas y variación genética en las especies.</p>
+<p>La biodiversidad mexicana, como la del planeta, se encuentra en peligro por diferentes amenazas a la naturaleza, y como se puede observar en los registros de las Listas Rojas mundiales, México es uno de los países con los números más altos de especies en alguna categoría de amenaza. Asimismo, la situación de las especies no es muy clara, y aun cuando existen leyes que estipulan la protección de la biota, éstas no son debidamente acatadas. Por lo anterior, se han realizado numerosas reuniones internacionales y nacionales para tratar el tema de la conservación de la biodiversidad y se han llevado a cabo esfuerzos valiosos para lograr estudios acerca del estado de la misma. [http://www.revistaciencias.unam.mx/]{.underline}</p>
+<p>Las principales amenazas a la biodiversidad y al ecosistema son:</p>
+<p>Alteración de hábitats, comúnmente por un cambio de ecosistemas a agroecosistemas (a menudo monocultivos). Es la amenaza más importante relacionada con cambios en el uso del suelo.</p>
+<p>Sobreexplotación, es decir, extracción de individuos a una tasa mayor que la que puede ser sostenida por la capacidad reproductiva natural de la población que se está aprovechando.</p>
+<p>Contaminación química. Se refiere a los desequilibrios ecológicos producidos por sustancias tóxicas provenientes de fuentes industriales, tales como óxidos de azufre, de nitrógeno, oxidantes, lluvia ácida; agroquímicos y metales pesados en los cuerpos de agua, en el suelo, en la atmósfera y en la vida silvestre, incluyendo al hombre.</p>
+<p>Cambio climático. A menudo se relaciona con cambios en los patrones regionales de clima. Este problema implica el incremento de bióxido de carbono, lo cual produce alteraciones regionales como El Niño, y efectos locales como la desertización. El cambio climático afecta drásticamente los biomas mundiales como bosques boreales, arrecifes de coral, manglares, humedales.</p>
+<p>Especies introducidas. No son del lugar y, en muchos casos, reemplazan prácticamente a las especies nativas. Por ejemplo, la introducción de especies de peces como la mojarra.</p>
+<p>Incremento de la población humana, lo cual trae consigo mayores demandas de bienes y servicios.</p>
+<p>Sequías, inundaciones, incendios, vulcanismo, huracanes, etcétera.</p>
+<p>[http://www.conevyt.org.mx]{.underline}</p>
+<h3 id="15-importancia-de-la-conservaci%C3%B3n-de-los-ecosistemas">1.5 Importancia de la conservación de los ecosistemas</h3>
+<p>La presión sobre los recursos naturales aumenta día con día y el efecto sobre los ecosistemas se manifiesta notablemente en la pérdida de especies y en la desaparición, fragmentación y degradación de los hábitats, paisajes y ecosistemas.</p>
+<p>Diariamente son deforestadas miles de hectáreas en el mundo y cientos de toneladas de basura y contaminantes son vertidos a las aguas, suelo y atmósfera.</p>
+<p>En este escenario, las especies silvestres sin un lugar adecuado donde vivir, tienden en la mayoría de los casos a desaparecer, a extinguirse. [http://conservacion2.blogspot.mx/]{.underline}</p>
+<p>Los ecosistemas y la biodiversidad que albergan son el soporte vital de la Tierra --dependemos de ellos, para el aire que respiramos, la comida que comemos y el agua que bebemos. Los humedales filtran los contaminantes del agua; las plantas y árboles reducen el calentamiento global absorbiendo el carbono, los microorganismos descomponen la materia orgánica y fertilizan el suelo, para proveer los alimentos. La biodiversidad ayuda a polinizar las flores y cultivos y también provee comida y medicinas para nuestro bienestar. Sin ella no seríamos capaces de sobrevivir.</p>
+<p>La importancia de nuestro mundo natural se revela en las miles de maneras diferentes en que los organismos de la Tierra interactúan entre sí, para contribuir al balance del ecosistema global y la supervivencia del planeta. No hay una sola forma de vida que pueda vivir en aislamiento.</p>
+<p>[http://www.naturalezaycultura.org/]{.underline}</p>
+<p>La diversidad biológica es sumamente importante para la humanidad, pues los ecosistemas nos proporcionan servicios ambientales esenciales para la vida, como la captura y el almacenamiento de agua en acuíferos, lagos y ríos; la producción de alimentos a partir de los ecosistemas agrícolas y pecuarios; la posibilidad de extraer del medio silvestre productos útiles como medicinas y madera; la captura del bióxido de carbono; la estabilidad climática, el mantenimiento de suelos fértiles y el control de deslaves y arrastres masivos de suelo por el efecto de lluvias torrenciales.</p>
+<p>Beneficios que recibimos de los ecosistemas</p>
+<table>
+<thead>
+<tr>
+<th>- Servicios de provisión de abastecimiento	  - a</th>
+<th>Servicios de regulación   Del clima (protección contra eventos  extremos, como inundaciones)   Control de erosión   Regulación de polinizadores   enfermedades   Purificación del agua</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-Servicios de soporte<br/> -Reciclado de nutrientes<br/> -Formación de suelo<br/> -Productividad primaria</td>
+<td>Servicios culturales<br/> Estéticos<br/> Espirituales<br/> Recreativos<br/> Educativos</td>
+</tr>
+</tbody>
+</table>
+<p>[http://www.conabio.gob.mx/]{.underline}</p>
+<h3 id="16-equidad-en-el-aprovechamiento-presente-y-futuro-de-los-recursos-el-desarrollo-sustentable">1.6 Equidad en el aprovechamiento presente y futuro de los recursos: el desarrollo sustentable</h3>
+<p>Como desarrollo sustentable denominamos al concepto que involucra una serie de medidas encaminadas a la administración eficiente y responsable de los recursos naturales por parte del ser humano para la preservación del equilibrio ecológico.</p>
+<p>Como tal, el concepto de desarrollo sustentable más citado es aquel elaborado en el <em>Informe Brundtland</em> (1987) por la Comisión Mundial sobre Medio Ambiente y Desarrollo para la Organización de las Naciones Unidas (ONU). Allí se explica que el desarrollo sustentable implica &quot;satisfacer las necesidades de las generaciones presentes sin comprometer las posibilidades de las del futuro para atender sus propias necesidades&quot;.</p>
+<p>En este sentido, el desarrollo sustentable es una evolución del antiguo concepto de desarrollo, pues no solo contempla el progreso económico y material, sino que lo plantea en equilibrio con el bienestar social y el aprovechamiento responsable de los recursos naturales. De este modo, concilia los tres ejes fundamentales de la sustentabilidad: lo económico, lo ecológico y lo social.</p>
+<p>Su objetivo último es alcanzar cierto nivel de progreso material sin por ello comprometer el medio ambiente, los recursos naturales, o la calidad de vida de los seres humanos y demás especies del planeta.</p>
+<p>[https://www.significados.com]{.underline}</p>
+<h2 id="tema-2-tecnolog%C3%ADa-y-sociedad">Tema 2. Tecnología y Sociedad</h2>
+<p>Tanto el saber teórico como el práctico son productos del conocimiento y se van construyendo paso a paso en la interacción social. Estos saberes son el legado cultural de las sociedades y están en permanente construcción y reconstrucción. La ciencia y la tecnología son productos históricos y saberes sociales, organizados y sistematizados, en continua creación. Hoy en día, el saber científico y el saber tecnológico se interrelacionan mutuamente; podría afirmarse que la tecnología está «cientifizada» y la ciencia «tecnologizada»; sin embargo, en la construcción de la ciencia y la tecnología subyace una especialización del saber teórico y del saber práctico.</p>
+<p>Los saberes se construyen en el proceso de solución de problemas. Los conocimientos tanto teóricos como prácticos aplicados en la interpretación y transformación del entorno configuran los saberes científicos y tecnológicos, y proporcionan desde sus respectivas intencionalidades modelos de solución de problemas.</p>
+<p>A continuación se consignan dos tablas que permiten ilustrar las relaciones y diferenciaciones entre la ciencia y la tecnología según sus intencionalidades en la solución de problemas (tomadas de la ponencia presentada por el profesor J.R. Gilbert, del Departamento de Educación Tecnológica y Científica de la Universidad de Reading, Gran Bretaña, en el IV Congreso Internacional sobre investigación de la didáctica de las Ciencias y la Matemática, Barcelona 1993):</p>
+<h2 id="ciencia-y-tecnolog%C3%ADa-como-ejemplos-de-soluci%C3%B3n-de-problemas">Ciencia y Tecnología como ejemplos de solución de problemas</h2>
+<table>
+<thead>
+<tr>
+<th>Modelo General de solución de problemas</th>
+<th>Proceso Científico</th>
+<th>Proceso Tecnológico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entender el problema</td>
+<td>Fenómeno natural</td>
+<td>Determinar la necesidad</td>
+</tr>
+<tr>
+<td>Describir el problema</td>
+<td>Describir el problema</td>
+<td>Describir la necesidad</td>
+</tr>
+<tr>
+<td>Considerar soluciones  alternativas</td>
+<td>Sugerir hipótesis</td>
+<td>Formular ideas</td>
+</tr>
+<tr>
+<td>Elegir la solución</td>
+<td>Seleccionar hipótesis</td>
+<td>Seleccionar ideas</td>
+</tr>
+<tr>
+<td>Actuar</td>
+<td>Experimentar</td>
+<td>Hacer el producto</td>
+</tr>
+<tr>
+<td>Evaluar el producto</td>
+<td>Encajar hipótesis/datos</td>
+<td>Probar el producto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diferencias-entre-la-ciencia-y-la-tecnolog%C3%ADa">Diferencias entre la Ciencia y la Tecnología</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Ciencia</strong></th>
+<th><strong>Tecnología</strong></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>| PROPÓSITO: Explicación                     | &gt; PROPÓSITO: Producción                                                              |
+|                                            | &gt;                                                                                    |
+| INTERÉS: Lo natural                        | &gt; INTERÉS: Lo artificial                                                             |
+|                                            | &gt;                                                                                    |
+| PROCESO: Analítico                         | &gt; PROCESO: Sintético                                                                 |
+|                                            | &gt;                                                                                    |
+| PROCEDIMIENTO: Simplificación del fenómeno | &gt; PROCEDIMIENTO: Aceptar la complejidad de la necesidad RESULTADO: Objeto particular |
+|                                            |                                                                                      |
+| RESULTADO: Conocimientos generalizables    |                                                                                      |
++--------------------------------------------+--------------------------------------------------------------------------------------+</p>
+<p>[https://es.slideshare.net/edithbarrerachavira/definicion-ciencia-y-tecnolog]{.underline}</p>
+<h3 id="21-ciencia-y-tecnolog%C3%ADa-en-la-interacci%C3%B3n-ser-humano-naturaleza">2.1 Ciencia y tecnología en la interacción ser humano-naturaleza</h3>
+<p>Desde diferentes posiciones ideológicas, se han realizado críticas a la tecnología de forma global o parcial. Se cree que lo que justifica a la ciencia y a la tecnología son sus aspectos positivos mientras que además se considera que ciertas tecnologías suponen una amenaza, un riesgo o un mal de algún tipo. Algunos alaban la tecnología como el fundamento de toda prosperidad, y creen que deberían imponerse pocas restricciones a su desarrollo. Otros la condenan como la causa del daño masivo al medio ambiente, y hacen un llamado a la imposición de controles estrictos. Pero la verdad es que es ambas cosas, y ninguna de las dos. La tecnología ha ayudado a traer riqueza a gran parte del mundo, aunque también ha sido el instrumento de mucho del daño ocasionado al planeta y a la vida sobre él. Pero en sí misma es neutral: por bien o por mal, sus efectos dependen del uso que nosotros hacemos de ella.</p>
+<p>[https://es.slideshare.net/Tovar95/ciencia-tecnologa-y-sociedad-cts-12025275]{.underline}</p>
+<p><strong>Tema 3. Transformación de materia en energía</strong></p>
+<h2 id="materia-y-energ%C3%ADa-y-sus-transformaciones">MATERIA Y ENERGÍA Y SUS TRANSFORMACIONES</h2>
+<p>Materia y energía son dos conceptos que utilizamos a diario. La materia se caracteriza por ocupar un lugar en el espacio y tener masa; puede ser sentida, tocada, vista, medida, pesado o almacenada.</p>
+<p>La energía es un poco más difícil de definir. Por lo general, se la conoce por sus efectos, como la capacidad de realizar trabajo y de producir cambios; es una propiedad que tiene que tiene la materia.</p>
+<p>Las transformaciones de la Energía tienen lugar en la alimentación de los seres vivos, en la dinámica de nuestra atmósfera y en la evolución del Universo.</p>
+<p>Todos los procesos naturales que acontecen en la materia pueden describirse en función de las transformaciones energéticas que tienen lugar en ella.</p>
+<p><strong>Cambios de la materia</strong>:</p>
+<p>Son las transformaciones que sufren los distintos materiales.</p>
+<p><strong>Fenómenos físicos:</strong> en un cambio físico, la composición química del material no se modifica. Son cambios físicos los de posición, de forma, de tamaño o de estado. El agua puede estar en tres estados diferentes: sólido con forma definida (hielo), líquido con volumen definido pero sin forma (agua) y gaseoso sin volumen ni forma definida (vapor de agua), pero sigue siendo agua. También son cambios físicos los que ocurren al preparar mezclas, ejemplo.</p>
+<p><strong>Fenómenos químicos</strong> son los que alteran la naturaleza de la materia en otra sustancia. Este fenómeno es irreversible. Si quemamos un papel, en su lugar quedan cenizas, gases en forma de humo y desprendimiento de calor, es decir, que uniendo todos los productos de la combustión no podemos recomponer el papel.</p>
+<h3 id="httpanacens76blogspotmx201210materia-y-energia-y-sus-transformacioneshtmlunderline">[http://anacens76.blogspot.mx/2012/10/materia-y-energia-y-sus-transformaciones.html]{.underline}</h3>
+<h4 id="31-la-fotos%C3%ADntesis-como-proceso-de-transformaci%C3%B3n-de-energ%C3%ADa-y-como-base-de-las-cadenas-alimenticia">3.1 La fotosíntesis como proceso de transformación de energía y como base de las cadenas alimenticia</h4>
+<p>La fotosíntesis (del griego antiguo φώτο [foto], &quot;luz&quot;, y σύνθεσις [síntesis], &quot;unión&quot;) es la conversión de materia inorgánica en materia orgánica gracias a la energía que aporta la luz. En este proceso la energía luminosa se transforma en energía química. Podemos decir que la fotosíntesis es el proceso que mantiene la vida en nuestro planeta.</p>
+<p>Las plantas terrestres, las algas de aguas dulces, marinas o las que habitan en los océanos realizan este proceso de transformación de la materia inorgánica en materia orgánica y al mismo tiempo convierten la energía solar en energía química...</p>
+<p><strong>La FOTOSÍNTESIS</strong> se relaciona con las CADENAS ALIMENTARIAS, ya que los PRODUCTORES:</p>
+<ol>
+<li>
+<p>Renuevan periódicamente el O2 en la atmósfera, importante para la respiración de todos los seres vivos aerobios.</p>
+</li>
+<li>
+<p>Producen ALIMENTOS gracias a la conversión de sustancias de baja energía potencial (CO2, H2O, fotones de luz solar), por medio de la interacción de pigmentos foto receptores (clorofila, carotenoides), en moléculas orgánicas ricas en energía química (carbohidratos, lípidos, proteínas), que le sirven de alimento a los productores y a los consumidores herbívoros.</p>
+</li>
+</ol>
+<p>3-La Fotosíntesis renueva constantemente las CADENAS ALIMENTARIAS de todos los Ecosistemas (terrestres, acuáticos, anfibios), ya que al actuar los DESCOMPONEDORES (hongos y bacterias saprófitas), transforman los restos de organismos vegetales y animales en descomposición en sustancias inorgánicas (sales minerales) para su reutilización en el armado de nuevas cadenas alimenticias.</p>
+<ol start="4">
+<li>
+<p>RECICLAN la materia orgánica, desde que es producida por los PRODUCTORES, hasta que es utilizada por los CONSUMIDORES y los DESCOMPONEDORES, en el Ciclo de la materia y el Flujo de la energía.</p>
+</li>
+<li>
+<p>LOS PRODUCTORES fabrican el alimento por medio de la FOTOSÍNTESIS, que luego será consumido por los CONSUMIDORES (Herbívoros, Carnívoros, Omnívoros). Ese alimento formado contiene ENERGÍA QUÍMICA. Esa energía pasa de eslabón en eslabón en la CADENA ALIMENTARIA a los CONSUMIDORES de diferentes órdenes y finalmente cuando un individuo muere, actúan los DESCOMPONEDORES (Hongos y Bacterias), quienes transforman la materia orgánica en inorgánica formando el HUMUS o tierra negra.</p>
+</li>
+</ol>
+<h3 id="httpangelicacienciaatualcancezblogspotmx201203fotosintesishtmlunderline">[http://angelicacienciaatualcancez.blogspot.mx/2012/03/fotosintesis.html]{.underline}</h3>
+<h4 id="32-respiraci%C3%B3n-celular">3.2 Respiración celular</h4>
+<p>Es un proceso catabólico mediante el cual los organismos liberan la energía química almacenada en las uniones químicas presentes entre los átomos de carbono de la glucosa, para lo cual, en la mayoría de los casos es necesaria la presencia de oxígeno (respiración aeróbica), produciéndose agua y dióxido de carbono.</p>
+<p>En cierta forma es un proceso inverso a la [f]{.underline}otosíntesis, ya que los productos de este proceso (la fotosíntesis) son los reactivos de la respiración.</p>
+<p>Todos los organismos realizan este proceso, con la única variante de que algunos lo realizan sin la presencia del oxígeno (respiración anaeróbica).</p>
+<p>La respiración se realiza en el citoplasma y en las mitocondrias de la célula...</p>
+<p>La respiración celular, al igual que la fotosíntesis, consta de varias etapas, en este caso son tres:</p>
+<ul>
+<li>
+<p>[glucólisis]{.underline}</p>
+</li>
+<li>
+<p>[ciclo de Krebs o del ácido cítrico]{.underline}</p>
+</li>
+<li>
+<p>[cadena respiratoria o fosforilación oxidativa]{.underline}.</p>
+</li>
+</ul>
+<h3 id="httpwwwefnuncoredudepartamentosdivbioecoanatocombiologiacelulametabolismorespiracio-n20celularhtmunderline">[http://www.efn.uncor.edu/departamentos/divbioeco/anatocom/Biologia/Celula/Metabolismo/Respiracio n%20celular.htm]{.underline}</h3>
+<h4 id="33-respiraci%C3%B3n-aerobia-y-anaerobia">3.3 Respiración aerobia y anaerobia</h4>
+<p>La respiración <strong>aerobia</strong> es la que utiliza <strong>oxígeno</strong> para <strong>extraer energía</strong> de la glucosa. Se efectúa en el interior de las células, en los organelos llamados <strong>mitocondrias</strong>. Durante el proceso respiratorio, parte de la energía contenida en la glucosa pasa a las moléculas de <em>ATP.</em> Con esta energía se alimentan, excretan los desechos, se reproducen y realizan todas las funciones que les permiten vivir. Tanto el dióxido de carbono como el agua salen de la célula y del cuerpo del ser vivo (Si se trata de un organismo pluricelular) porque constituyen sustancias de desecho. La energía puede utilizarse de inmediato o almacenarse para su uso posterior.</p>
+<p>Las bacterias no tienen mitocondrias, por lo cual la respiración se efectúa en su citoplasma. En el resto de los organismos pertenecientes a los 4 reinos (Protistas, hongos, plantas y animales) si existen estos organelos. Algunas células tienen más mitocondrias que otras; por ejemplo, las neuronas, las células musculares y los espermatozoides requieren de altas cantidades de energía y por ello tienen numerosas mitocondrias.</p>
+<p>La respiración <strong>anaerobia</strong> consiste en que la <strong>célula obtiene energía</strong> de una sustancia, <strong>sin utilizar oxígeno</strong>; al hacerlo, divide esa sustancia en otras; a la respiración anaerobia también se le llama fermentación. Probablemente la respiración anaerobia más conocida sea la de las <strong>lavaduras</strong> de la cerveza (Saccharomyces cerevisiae), que son hongos unicelulares.</p>
+<p>[https://bibliotecadeinvestigaciones.wordpress.com/biologia/sistemas-y-aparatos-del-cuerpo-humano/sistemarespiratorio/la-respiracion-aerobia-y-anaerobia]{.underline}</p>
+<h3 id="respiraci%C3%B3n-aerobia-y-anaerobia">RESPIRACIÓN AEROBIA Y ANAEROBIA</h3>
+<p>A continuación te presento el siguiente mapa conceptual que contiene un poco de estos dos tipos de respiración y que posteriormente analizaremos más a fondo.</p>
+<p><img src="C:\Users\navarbosa\AppData\Roaming\Typora\typora-user-images\image-20200416130234442.png" alt="image-20200416130234442"></p>
+<p><img src="media/image3.jpg" alt="">{width=&quot;6.666666666666667in&quot; height=&quot;4.5525in&quot;}</p>
+<p>LA RESPIRACIÓN AEROBIA</p>
+<p><img src="C:\Users\navarbosa\AppData\Roaming\Typora\typora-user-images\image-20200416130251572.png" alt="image-20200416130251572"></p>
+<p><img src="media/image4.jpg" alt="">{width=&quot;1.875in&quot; height=&quot;1.875in&quot;}La realizan los seres vivos que pueden utilizar el oxígeno atmosférico o el que se</p>
+<p>encuentra disuelto en el agua para liberar la energía almacenada en moléculas de glucosa, con el objeto de que sus células obtengan la energía que requieren para vivir.</p>
+<p>Cuando no hay oxígeno en el medio se detiene el mecanismo celular de la respiración y sobreviene la muerte. El oxígeno, como cualquier gas, atraviesa la membrana celular, llega a la mitocondria, en donde transforma la glucosa en agua.</p>
+<p>De este proceso químico se obtiene la energía necesaria para llevar a cabo todos los procesos vitales. La respiración aerobia es la forma más extendida, propia de todos los eucariontes y de algunas bacterias.</p>
+<p><img src="media/image5.jpg" alt="">{width=&quot;3.1333333333333333in&quot; height=&quot;2.61in&quot;}</p>
+<p>RESPIRACIÓN ANAEROBIA</p>
+<p><img src="media/image6.jpg" alt="">{width=&quot;2.0833333333333335in&quot; height=&quot;1.7191666666666667in&quot;}Es la propiedad de los procariontes diversos que habitan en todo tipo de suelo y</p>
+<p>sedimentos, tienen importantes funciones en los ciclos biogeoquímicos. El proceso de obtención de energía no requiere oxígeno, sino sustancias inorgánicas oxigenadas, como sulfatos y nitratos. Los productos formados no son necesariamente agua y dióxido de carbono sino que pueden ser otras sustancias.</p>
+<p>La respiración anaerobia es la única manera de sobrevivir para aquellos microorganismos que habitan en intestinos de grandes animales, enterrados en el suelo profundo, o en sedimentos de lagos y océanos, sitios en los cuales el oxígeno está casi o totalmente ausente. Un ejemplo de estos seres anaeróbicos son las levaduras.</p>
+<p><img src="media/image7.jpg" alt="">{width=&quot;2.0833333333333335in&quot; height=&quot;1.385in&quot;}.</p>
+<p>[http://pedagogiadidac.blogspot.mx/2012/08/comparacion-entre-la-respiracion.html]{.underline}</p>
+<h4 id="34-fotos%C3%ADntesis-y-respiraci%C3%B3n-en-el-ciclo-del-carbono">3.4 Fotosíntesis y respiración en el Ciclo del Carbono</h4>
+<p>Los organismos estamos compuestos, principalmente, de sustancias que contienen carbono. El carbono entra en un ecosistema cuando los organismos productores toman el dióxido de carbono de la atmósfera durante la fotosíntesis.</p>
+<p>En la cadena alimentaria, los consumidores se comen a los productores, y así obtienen el carbono. Cuando los consumidores modifican las sustancias de la comida para obtener emergía durante la respiración celular, parte del carbono se convierte en el dióxido de carbono que exhalamos y vuelve a la atmósfera.</p>
+<p><img src="media/image8.jpg" alt="">{width=&quot;4.458333333333333in&quot; height=&quot;3.1566666666666667in&quot;}</p>
+<p>Por otro lado, los descomponedores (hongos y bacterias) que se encuentran en el suelo juegan un papel muy importante, ya que se alimentan de materia orgánica en descomposición (organismos muertos) y restituyen los nutrientes del suelo. De esta manera, las plantas pueden seguir utilizando estos nutrientes para vivir. Y si pensamos que los ecosistemas dependen de gran medida de los productores como las plantas, imagínate lo que sucedería si no existieran descomponedores. La vida en el planeta sería prácticamente imposible sin la presencia de hongos y bacterias.</p>
+<p>Los organismos fotosintéticos también respiran y producen dióxido de carbono que se va a la atmósfera. El carbono entra y sale del organismo.</p>
+<p>Lo que produce un organismo lo consume el otro. De tal manera que se forman ciclos que están en equilibrio y que mantienen la vida en el planeta. Si no fuera así, llegaría un momento en que los materiales se acabarían y con ellos, la vida de la Tierra.</p>
+<p>Los combustibles fósiles como el petróleo, el carbón, el aceite y el gas natural son reservas de carbono que se formaron cuando cuerpos de plantas y animales quedaron enterrados hace millones de años. Mientras las reservas estuvieron enterradas, no participaron en el ciclo del carbono.</p>
+<p>El ciclo de carbono es importante para todos los seres vivos de este planeta. De su existencia depende la biodiversidad. El ciclo del carbono existe porque el dióxido de carbono es una molécula consumida y producida por los seres vivos a través de la fotosíntesis y la respiración.</p>
+<p>[https://biologiaje.wikispaces.com/relaci%C3%B3n+de+los+procesos+de+respiraci%C3%B3n+y+fotosistesis+c on+el+ciclo+de+carbono]{.underline}</p>
+<p><strong>3.5 Organismos Autótrofos y Heterótrofos</strong></p>
+<p>Si tenemos en cuenta el tipo de nutrición podemos distinguir dos clases de seres vivos:</p>
+<h4 id="width%222245833333333333in%22-height%22167in%22aut%C3%B3trofos"><img src="media/image9.jpg" alt="">{width=&quot;2.245833333333333in&quot; height=&quot;1.67in&quot;}Autótrofos</h4>
+<blockquote>
+<p>Fabrican su propio alimento (sustancias orgánicas), a partir de sustancias inorgánicas que captan de su entorno, como agua, sales minerales y dióxido de carbono. Para ello precisan energía, que generalmente obtienen de la luz del sol, mediante un proceso llamado fotosíntesis.</p>
+<p>Ejemplo: algunas bacterias, algas y plantas.</p>
+</blockquote>
+<h4 id="width%222245833333333333in%22-height%2213966666666666667in%22heter%C3%B3trofos"><img src="media/image10.jpg" alt="">{width=&quot;2.245833333333333in&quot; height=&quot;1.3966666666666667in&quot;}Heterótrofos</h4>
+<blockquote>
+<p>Necesitan incorporar materia orgánica ya elaborada, por eso se alimentan de otros seres vivos o de sus restos.</p>
+<p>Ejemplo: mayoría de los microorganismos, hongos y animales.</p>
+</blockquote>
+<p>Los alimentos contienen nutrientes, estos son utilizados por las células para obtener materia y energía para crecer, construir y renovar sus estructuras.</p>
+<p>[http://contenidosdigitales.ulp.edu.ar]{.underline}</p>
+<h4 id="heter%C3%B3trofos-y-aut%C3%B3trofos">Heterótrofos y autótrofos</h4>
+<p>La energía que produjeron las primeras moléculas orgánicas provino de una variedad de fuentes existentes en la Tierra primitiva y en su atmósfera: calor, radiaciones ultravioletas y perturbaciones eléctricas. Cuando aparecieron las primeras células primitivas, o estructuras semejantes a células, requirieron un aporte continuo de energía para mantenerse, crecer y reproducirse. El modo como estas células obtuvieron la energía actualmente es objeto de una discusión vivaz.</p>
+<p>Los organismos modernos y las células de las cuales están compuestos pueden satisfacer sus requerimientos energéticos en una de dos formas:</p>
+<p>Heterótrofos: son organismos que dependen de fuentes externas de moléculas orgánicas para obtener su energía y sus moléculas estructurales. Todos los animales y los hongos, así como muchos organismos unicelulares, son heterótrofos.</p>
+<p>Autótrofos: se &quot;autoalimentan&quot;. No requieren moléculas orgánicas procedentes de fuentes externas para obtener su energía o para usarlas como pequeñas moléculas de tipo estructural; en cambio, son capaces de sintetizar sus propias moléculas orgánicas ricas en energía a partir de sustancias inorgánicas simples. La mayoría de los autótrofos, incluyendo las plantas y varios tipos diferentes de organismos unicelulares, realizan fotosíntesis, lo que significa que la fuente de energía para sus reacciones de síntesis es el Sol. Ciertos grupos de bacterias, sin embargo, son quimio sintéticas; estos organismos capturan la energía liberada por reacciones inorgánicas específicas para impulsar sus procesos vitales, incluyendo la síntesis de las moléculas orgánicas necesarias.</p>
+<p>[http://www.fisicanet.com.ar/biologia/introduccion_biologia/ap15_heterotrofos_y_autotrofos.php]{.underline}</p>
+<h4 id="tema-4-nutrici%C3%B3n-y-respiraci%C3%B3n-para-el-cuidado-de-la-salud">TEMA 4. Nutrición y respiración para el cuidado de la salud</h4>
+<h5 id="41-importancia-de-la-alimentaci%C3%B3n-correcta-en-la-salud-dieta-equilibrada-completa-e-higi%C3%A9nica">4.1 Importancia de la alimentación correcta en la salud: dieta equilibrada, completa e higiénica</h5>
+<p>Una alimentación correcta es aquella que cubre las necesidades nutricionales en las distintas etapas de la vida; en los niños promueve el desarrollo y el crecimiento adecuados, y en los adultos permite conservar el peso adecuado según la talla del individuo, además de prevenir el desarrollo de enfermedades.</p>
+<h4 id="el-plato-del-buen-comer">El plato del buen comer</h4>
+<p>Para lograr una buena nutrición la dieta debe ser completa y equilibrada, es decir que contenga todos los nutrimentos y que estos se encuentren en las proporciones adecuadas. El plato del buen comer es una guía para tener una buena alimentación más sana que recomienda incluir en cada comida alimentos de los tres grupos: cereales, y tubérculos, frutas y verduras, y alimentos de origen animal y leguminoso.</p>
+<p>[http://tudecidestualimentacion.blogspot.mx/2009/02/importancia-de-la-alimentacion-correcta.html]{.underline}</p>
+<h3 id="plato-del-buen-comer">Plato del Buen Comer</h3>
+<blockquote>
+<p><img src="media/image11.jpg" alt="">{width=&quot;2.4058333333333333in&quot; height=&quot;2.4291666666666667in&quot;}</p>
+</blockquote>
+<p>Para tener una alimentación balanceada completa e higiénica debemos consumir con los alimentos los siguientes nutrimentos:</p>
+<ul>
+<li>
+<p>Carbohidratos o azucares</p>
+</li>
+<li>
+<p>Lípidos o grasas</p>
+</li>
+<li>
+<p>Proteínas</p>
+</li>
+<li>
+<p>Vitaminas</p>
+</li>
+<li>
+<p>Minerales</p>
+</li>
+</ul>
+<p>Los carbohidratos o azucares, los contienen alimentos como la leche, el pan, los cereales, dulce, frutas, entre otros. Su función en el organismo es proporcionar energía primaria para realizar todas nuestras funciones.</p>
+<p>Las grasas o lípidos se encuentran contenidos en alimentos de origen vegetal y animal como el pollo, pescado, mariscos, carne de cerdo, chocolate, coco, aguacate, cacahuates, etc. La función de las grasas en el organismo es proporcionar energía de reserva, son amortiguadores ya que se almacenan en el tejido graso debajo de la piel, regulan la temperatura corporal.</p>
+<p>Las proteínas se encuentran en alimentos de origen animal como la leche, la carne y el huevo, vegetales como las lentejas, garbanzos, ejotes. Su función en el organismo es importantísima ya que forman parte de todas las estructuras celulares, actúan como anticuerpos y dan lugar a la formación de enzimas las cuales aceleran funciones en el organismo.</p>
+<p>Las vitaminas se encuentran en alimentos como frutas y verduras, y algunas otras en alimentos de origen animal, nuestro organismo no puede sintetizarlas por sí mismo a excepción de la vitamina K, por lo tanto debemos consumirlas con los alimentos. Las funciones de las vitaminas son específicas para cada una de ellas, intervienen en el metabolismo y su deficiencia en el organismo produce enfermedades.</p>
+<p>Los minerales son micronutrientes inorgánicos que el cuerpo necesita en cantidades o dosis muy pequeñas; entre todos los minerales suman unos pocos gramos pero son tan importantes como las vitaminas, y sin ellos nuestro organismo no podría realizar las amplias funciones metabólicas que realizamos a diario. Los minerales cumplen funciones plásticas, reguladoras y reparadoras.</p>
+<p>Además de estos nutrientes debemos consumir fibra contenida en los alimentos, dentro de sus funciones se encuentran:</p>
+<ul>
+<li>
+<p>Aumentan el volumen de las heces (eliminan el estreñimiento)</p>
+</li>
+<li>
+<p>Aceleran el tránsito intestinal</p>
+</li>
+<li>
+<p>Permiten eliminar el colesterol y ciertas sales biliares y</p>
+</li>
+<li>
+<p>Disminuyen la cantidad de glucosa y de ácidos grasos en la sangre</p>
+</li>
+</ul>
+<p>Junto con estos nutrientes debemos consumir agua para un correcto funcionamiento del aparato digestivo y una buena nutrición, para ello debes consumir 8 vasos de agua al día. La función del agua en el organismo es doble: ayuda a eliminar toxinas a través de la orina y de la transpiración y, mediante esta última, también regula la temperatura del cuerpo, manteniéndolo refrigerado cuando se encuentra expuesto a temperaturas elevadas.</p>
+<p>[http://angelicacienciaatualcancez.blogspot.mx/2012/02/alimentacion-equilibrada-completa-e.html]{.underline}</p>
+<p><strong>4.2 Prevención de Enfermedades relacionadas con la nutrición</strong></p>
+<p><strong>Enfermedades relacionadas con la mala nutrición</strong></p>
+<h4 id="obesidad">Obesidad</h4>
+<p><strong>¿Qué es la obesidad?</strong></p>
+<p>Es una enfermedad crónica originada por muchas causas y con numerosas complicaciones, se caracteriza por el exceso de grasa en el organismo y se presenta cuando el Índice de Masa Corporal en el adulto es mayor de 25 unidades.</p>
+<p>La obesidad no distingue color de piel, edad, nivel socioeconómico, sexo o situación geográfica.</p>
+<h4 id="causas">Causas</h4>
+<p>La obesidad es el resultado del consumo de una cantidad de calorías mayor que las que el cuerpo utiliza. Los factores genéticos y ambientales influyen en el peso del cuerpo, pero su interactuación para determinar el peso de una persona no está todavía aclarada.</p>
+<p>Actividad física: la actividad física reducida es probablemente una de las razones principales para el incremento de la obesidad entre las personas de las sociedades opulentas. En algunas, los Estados Unidos, por ejemplo, la obesidad es hoy dos veces más frecuente que en el año 1900, aun cuando el término medio de calorías consumidas diariamente ha disminuido un 10 por ciento. Las personas sedentarias necesitan menos calorías. El aumento de la actividad física hace que las personas de peso normal coman más, pero puede que no ocurra lo mismo en las personas obesas.</p>
+<h4 id="s%C3%ADntomas">Síntomas</h4>
+<p>La acumulación del exceso de grasa debajo del diafragma y en la pared torácica puede ejercer presión en los pulmones, provocando dificultad para respirar y ahogo, incluso con un esfuerzo mínimo. La dificultad en la respiración puede interferir gravemente en el sueño, provocando la parada momentánea de la respiración (apnea del sueño), lo que causa somnolencia durante el día y otras complicaciones.</p>
+<p>Tipos de obesidad: Obesidad androide y obesidad ginecoide.</p>
+<h4 id="enfermedades-infecciosas">Enfermedades Infecciosas</h4>
+<p>Las enfermedades infecciosas y las infecciones de vías gastrointestinales incluyendo a las infecciones por parásitos, son de las primeras causas de muerte a escala mundial al final del milenio.</p>
+<p>Las infecciones y enfermedades producidas por helmintos en seres humanos son de gran importancia médica en todos los países en desarrollo.</p>
+<p><strong>Amebiasis intestinal</strong>.</p>
+<p>La amebiasis intestinal es el nombre con que se describe la parasitosis humana causada por el protozoario Entamoeba histolytica.</p>
+<p>La amebiasis es la tercera enfermedad parasitaria más importante del mundo. Tiene una distribución mundial que varía de un lugar a otro. Generalmente las tasas de prevalecía son más altas en algunas zonas del trópico, donde el saneamiento es deficiente. Siendo este el caso de la República Dominicana su población posee grandes riesgos de contraer esta patología.</p>
+<h4 id="anorexia">Anorexia</h4>
+<p>La palabra anorexia era utilizada por los médicos como sinónimo de falta de apetito, inapetencia y ciertos trastornos del estómago.</p>
+<p>Richard Morton fue el primero que hizo una descripción del cuadro de anorexia. Describió a una paciente de 18 años que presentaba los síntomas propios de la anorexia nerviosa: adelgazamiento, dedicación obsesiva al estudio, pérdida de apetito...</p>
+<h4 id="concepto">Concepto</h4>
+<p>La anorexia nerviosa es un trastorno del comportamiento alimentario que se caracteriza por una pérdida significativa del peso corporal producida normalmente por la decisión voluntaria de adelgazar. Este adelgazamiento se consigue suprimiendo o reduciendo el consumo de alimentos, especialmente &quot;los que engordan&quot; y también con cierta frecuencia mediante vómitos, uso indebido de laxantes, ejercicio físico exagerado y consumo de anorexígenos, diuréticos...</p>
+<p>El trastorno suele iniciarse entre los 14 y 18 años de edad, pero en los últimos tiempos está descendiendo la edad del inicio.</p>
+<h4 id="se%C3%B1ales-de-alarma-de-la-anorexia-nerviosa">Señales de alarma de la anorexia nerviosa</h4>
+<ul>
+<li>
+<p>Comer como si estuviera a dieta, a pesar de que ya está muy delgada.</p>
+</li>
+<li>
+<p>Usar ropas muy holgadas o demasiado grandes.</p>
+</li>
+<li>
+<p>Estar preocupadas por el peso, por conseguir dietas y por la figura.</p>
+</li>
+<li>
+<p>Experimenta cambios de personalidad.</p>
+</li>
+<li>
+<p>Experimenta vértigos, desmayos, pérdida de conocimiento y dificultad para concentrarse.</p>
+</li>
+<li>
+<p>Temor a aumentar de peso o engordar.</p>
+</li>
+<li>
+<p>Percepción distorsionada del peso, tamaño o figura de su cuerpo.</p>
+</li>
+<li>
+<p>En las mujeres, la ausencia de al menos tres ciclos menstruales consecutivos.</p>
+</li>
+<li>
+<p>Ausencia de otro trastorno físico o psiquiátrico que pudiera justificar la pérdida de peso o la negativa de comer.</p>
+</li>
+<li>
+<p>Comienzo del tratamiento antes de los 25 años de edad.</p>
+</li>
+<li>
+<p>Presencia de al menos 2 síntomas fisiológicos asociados a la anorexia nerviosa. Éstos son:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div>&lt;!-- --&gt;
+</div></code></pre>
+<ul>
+<li>
+<p>Abuso de laxantes, diuréticos o píldoras de dieta.</p>
+</li>
+<li>
+<p>Hacer ejercicio de manera excesiva. Puede que hasta 5 o 6 horas al día.</p>
+</li>
+<li>
+<p>Osteoporosis. Los huesos se vuelven más frágiles.</p>
+</li>
+</ul>
+<p>Síntomas físicos de inanición</p>
+<ul>
+<li>
+<p>Piel fría, algunas veces con tonalidad azulada.</p>
+</li>
+<li>
+<p>Dolor al sentarse.</p>
+</li>
+<li>
+<p>Desarrollo de vello muy fino por todo el cuerpo.</p>
+</li>
+<li>
+<p>Hipotensión, o presión anormalmente baja.</p>
+</li>
+<li>
+<p>Corazón debilitado.</p>
+</li>
+<li>
+<p>Indigestión después de la escasa comida que consume.</p>
+</li>
+<li>
+<p>Sensación de debilidad o cansancio.</p>
+</li>
+<li>
+<p>Problemas de sueño.</p>
+</li>
+<li>
+<p>Anemia debido a la falta de hierro y proteínas.</p>
+</li>
+<li>
+<p>Anormalidades hormonales: ausencia de los períodos menstruales.</p>
+</li>
+</ul>
+<p>Comportamiento ingestivo: los primeros cambios son el inicio de una dieta restrictiva. Suele iniciarse limitando y/o suprimiendo los hidratos de carbono mediante la reducción o supresión de grasas y acaba en la limitación de la ingesta proteínica.</p>
+<h4 id="bulimia">Bulimia</h4>
+<p><strong>¿Qué es la bulimia?</strong></p>
+<p>Es un trastorno mental que se caracteriza por episodios de voracidad o, lo que es lo mismo, comer grandes cantidades de comida en un corto espacio de tiempo (&quot;atracones&quot;), a los que se siguen casi siempre conductas tendentes a evitar el aumento de peso, tales como: ayuno, ejercicio físico excesivo, ingestión de laxantes y diuréticos, vómitos provocados, etc.</p>
+<p>La persona que padece bulimia tiene un intenso temor de engordar, junto a una falta de control sobre su alimentación y sentimientos de culpabilidad y auto desprecio.</p>
+<p>La bulimia no es una manía ni un mal comportamiento, es una enfermedad psiquiátrica. Su descripción se recoge en la Clasificación Internacional de enfermedades de la Organización Mundial de la Salud, como &quot;Trastornos de la Conducta Alimentaria&quot;.</p>
+<p><strong>¿Cuáles son las causas de la bulimia?</strong></p>
+<p>En la mayoría de los casos, la bulimia comienza tras haber realizado dietas de adelgazamiento excesivo o sin control médico, o en el curso de una anorexia nerviosa; es sabido que un 50% aproximadamente de los casos de anorexia evolucionan hacia el padecimiento de una bulimia.</p>
+<p>En ambos casos, la excesiva restricción alimentaria conduce al deseo imperioso y patológico de ingerir grandes cantidades de comida.</p>
+<h4 id="diabetes">Diabetes</h4>
+<p><strong>¿Qué es la diabetes?</strong></p>
+<p>La diabetes es una enfermedad caracterizada por un trastorno de la nutrición, que afecta principalmente al aprovechamiento de los azúcares, y cuya causa fundamentalmente estriba en una insuficiente producción de la hormona insulina por el páncreas. Una característica primordial de la diabetes es la eliminación de azúcares por la orina, se explica por la cantidad de azúcar que contiene la sangre es superior a la que contiene normalmente.</p>
+<h4 id="factores-que-causan-la-diabetes">Factores que causan la diabetes</h4>
+<p>A través de la acción dañina de las sustancias perturbadoras. La alimentación antinatural da lugar a digestiones difíciles, lentas e incompletas, por lo que se forman numerosas sustancias nocivas que el hígado no puede neutralizar; estas sustancias, al pasar a la sangre llegan a las glándulas de secreción interna, entre ellas el páncreas, y alteran su función normal y natural.</p>
+<p>Por un agotamiento del páncreas debido a un exceso de trabajo el cual no puede producir la insulina necesaria. La alimentación excesiva y anti natural obliga al páncreas a producir una cantidad excesiva de insulina, y por consiguiente se agota.</p>
+<p>Por un predominio de las grasas y albúminas sobre los azúcares. Las personas que comen con exceso de carnes y alimentos fuertes, ingieren mayor cantidad de grasas y albúminas; este desequilibrio es la causa de que la nutrición sea artificial y forzada, y por ello se llega a una pérdida de capacidad para aprovechar debidamente los azúcares.</p>
+<p>Debido a una arteriosclerosis. Es decir por un endurecimiento de las arterias. Cuando esta enfermedad afecta también a las arterias del páncreas, este órgano recibe menos cantidad de sangre y no puede funcionar normalmente.</p>
+<p>Por la debilitación del órgano debido a sustancias nocivas. Cuando el hígado debilitado por las sustancias perturbadoras, no puede retener y almacenar el azúcar, obliga al páncreas a una elaboración excesiva de insulina para quemar el azúcar que el hígado no pudo almacenar. El páncreas no lo consigue a no ser que efectúe un exceso de trabajo, que conduce a su agotamiento.</p>
+<p>La escasez de sustancias vitales en la alimentación es otra de las causas que favorece la presentación de una diabetes. Además de los procesos infecciosos crónicos así también como las emociones perjudiciales y la tensión nerviosa que hoy padecen tantas personas.</p>
+<h4 id="diabetes-por-alcoholismo">Diabetes por alcoholismo</h4>
+<p>Cuando las personas que beben mucho y son diabéticas suelen también comer mucho, no son raros los casos de diabetes producidas por el alcohol.</p>
+<p>Los mecanismos por los que el alcoholismo puede llegar a producir diabetes son los siguientes:</p>
+<p>Por arteriosclerosis</p>
+<p>Por acción directa del alcohol sobre las glándulas de secreción interna, el páncreas Por formación de sustancias tóxicas, tóxicos digestivos, a causa de dispepsia alcohólica. Por una disminución de grasas y azúcares, lo que determina, una mayor combustión</p>
+<p>[http://felipe.blogdiario.com/1171669500/prevencion-de-enfermedades-relacionadas-con-la-nutricion/]{.underline}</p>
+<h5 id="43-principales-causas-y-consecuencias-de-la-contaminaci%C3%B3n-de-la-atm%C3%B3sfera-y-del-calentamiento-global">4.3 Principales causas y consecuencias de la contaminación de la atmósfera y del calentamiento global</h5>
+<p>La contaminación se produce cuando los residuos contaminan el entorno natural; trayendo como consecuencias cambios que afectan a nuestro estilo de vida normal, de manera perjudicial. Los residuos son los elementos principales de la contaminación. La contaminación altera nuestro ecosistema y el equilibrio del medio ambiente.</p>
+<p>&quot;<em>Con la modernización y el desarrollo en nuestras vidas, la contaminación ha alcanzado su pico; dando lugar al calentamiento climático y al origen de enfermedades humanas&quot;<strong>.</strong></em></p>
+<p>La contaminación se produce de diferentes formas: aire, agua, tierra, radiación, ruido calor/termal y luz. Cada forma de contaminación tiene dos fuentes de ocurrencia; el <strong>punto principal y las fuentes secundarias</strong>. Las fuentes principales son fáciles de identificar, monitorizar y controlar, sin embargo las fuentes secundarias son más difíciles.</p>
+<p>La contaminación del aire es la <strong>forma de contaminación más destacada y peligrosa</strong>. Se produce debido a muchas razones, por ejemplo, la <strong>excesiva quema de combustible</strong> libera una enorme cantidad de substancias químicas que contaminan el medio ambiente. Esta actividad se produce diariamente ya que es necesaria para cocinar, conducir, trabajar y para realizar otro tipo de actividades.</p>
+<p>El humo de las chimeneas, las fábricas, los vehículos o la destrucción de la madera se produce tras la <strong>quema de carbón que libera sulfuro de dióxido al aire,</strong> volviéndolo tóxico. Los efectos de la contaminación del aire son evidentes. La liberación de sulfuro de dióxido y de gases peligros al aire genera el <strong>[calentamiento global]{.underline} y la lluvia ácida</strong>; que a su vez incrementan las temperaturas, las lluvias irregulares y las sequías en todo el mundo; volviéndose para los animales muy difícil sobrevivir. Lo respiramos en cada partícula de aire, causando un incremento del <strong>asma</strong> y del <strong>cáncer de pulmón.</strong></p>
+<p>[http://comofuncionaque.com/que-es-la-contaminacion-causas-y-efectos/]{.underline}</p>
+<h2 id="calentamiento-global">CALENTAMIENTO GLOBAL</h2>
+<p>El calentamiento global es el aumento continuo de la temperatura promedio global de la atmósfera terrestre y de los océanos.</p>
+<p>El calentamiento global es un fenómeno que ocurre cuando hay demasiados gases de efecto invernadero en el atmósfera. El efecto invernadero es un proceso que se produce cuando ciertos gases de la atmósfera de la tierra retienen el calor. Estos gases dejan pasar la luz pero mantienen el calor como las paredes de cristal de un invernadero.</p>
+<p>El incremento de la temperatura global causa cambios en los patrones de clima, por eso, <strong>algunos lugares pueden experimentar sequías mientras otros se inundan, los lugares fríos se vuelven más cálidos y los lugares calurosos se hacen más frescos.</strong></p>
+<ul>
+<li>
+<p>Uso de combustibles fósiles (carbón y petróleo) como fuentes de energía en la industria y el transporte.</p>
+</li>
+<li>
+<p>El exceso de incendios forestales, motivado por la mano del hombre, contribuyen en la aceleración del proceso del calentamiento global.</p>
+</li>
+<li>
+<p>La quema de combustibles fósiles, carbón, petróleo y gas, y la destrucción de bosques, se han convertido en las principales causas de la emisión a la atmósfera de dióxido de carbono (CO2), el gas más peligroso en la generación del efecto invernadero.</p>
+</li>
+<li>
+<p>La actividad Ganadera.</p>
+</li>
+<li>
+<p>Descomposición de la basura.</p>
+</li>
+<li>
+<p>Subida en el nivel del mar.</p>
+</li>
+<li>
+<p>Cambios en los ecosistemas.</p>
+</li>
+<li>
+<p>Alteración en el ciclo de producción de los alimentos.</p>
+</li>
+<li>
+<p>Modificación del ciclo hidrológico.</p>
+</li>
+<li>
+<p>Extinción de especies animales y vegetales.</p>
+</li>
+<li>
+<p>Aumento de la temperatura y la concentración de CO2.</p>
+</li>
+<li>
+<p>Modificación de los ciclos reproductivos de especies animales y vegetales.</p>
+</li>
+<li>
+<p>Invasión de las zonas no intervenidas.</p>
+</li>
+<li>
+<p>Desertificación de tierras.</p>
+</li>
+<li>
+<p>Calentamiento de los mares tropicales y templados.</p>
+</li>
+<li>
+<p>Intensificación de los fenómenos climáticos (huracanes, tormentas).</p>
+</li>
+<li>
+<p>Incremento en la población de enfermedades respiratorias y de la piel.</p>
+</li>
+<li>
+<p>Deshielo de los glaciares.</p>
+</li>
+<li>
+<p>Incremento en las inundaciones.</p>
+</li>
+<li>
+<p>Modificación de los nichos ecológicos.</p>
+</li>
+<li>
+<p>Reducción del agua potable.</p>
+</li>
+</ul>
+<p>Para solucionar el <strong>Calentamiento Global</strong>, el hombre debe dejar de quemar combustibles fósiles y comenzar a utilizar la energía solar, eólica y otras fuentes de energía renovables.</p>
+<p>[http://www.pac.com.ve/contenido/educacion/calentamiento-global-causas-y-consecuencias/11127/81]{.underline}</p>
+<h3 id="44-prevenci%C3%B3n-de-enfermedades-respiratorias">4.4 Prevención de enfermedades respiratorias</h3>
+<p>Las <strong>bajas temperaturas</strong>, <strong>cambios climáticos bruscos</strong> y la <strong>contaminación ambiental</strong> son factores que contribuyen a la aparición de enfermedades comunes del invierno: <strong>gripe</strong>, <strong>resfriado</strong>, <strong>tos</strong>, <strong>otitis</strong> (infecciones en el oído), <strong>bronquitis</strong> y <strong>laringitis</strong>; así, como otras enfermedades respiratorias crónicas que pueden llegar a causar la muerte: <strong>neumonía</strong>, <strong>asma</strong> y problemas respiratorios crónicos como neumonía.</p>
+<h3 id="httpwwwsalud180comsalud-dia-dia10-consejos-para-evitar-enfermedades-respiratoriasunderline">[http://www.salud180.com/salud-dia-dia/10-consejos-para-evitar-enfermedades-respiratorias]{.underline}</h3>
+<p>A continuación, diez recomendaciones básicas a considerar, que pueden contribuir a que tu o la familia sean víctimas de resfriado, gripe o influenza, laringitis, faringitis, sinusitis, bronquitis o neumonía. En el entendido que el principal grupo de riesgo son los niños y adultos mayores, así como las personas con enfermedades cardiovasculares, metabólicas y renales preexistentes, mismos que requerirán de una mayor atención por parte de la familia.</p>
+<p>1.- Abrígate bien y evita los cambios bruscos de temperatura. Al respecto es importante proteger especialmente la zona de cabeza, manos y pies; procurar respirar con la ayuda de una bufanda en sitios de mucho frio, y no mantenerse excesivamente abrigados en interiores para evitar sudar y luego encontrarse nuevamente con el frio exterior.</p>
+<p>2.- Evita asistir a sitios concurridos donde haya aglomeraciones para evitar un contagio.</p>
+<p>3.- Procura no fumar, ni acudas a lugares donde lo hacen, así como que los menores o personas mayores estén en contacto con el humo del cigarro,</p>
+<p>4.- Lava frecuentemente las manos con agua y jabón, particularmente al llegar a casa y después de saludar a personas enfermas.</p>
+<p>5.- Consume alimentos naturales ricos en vitaminas A y C, como son limón, naranja, lima, mandarina, guayaba y zanahoria, así como las verduras de hoja verde oscura, para mantener en buen estado el sistema inmunológico.</p>
+<p>6.- Ventila diariamente tu casa para que el aire se renueve.</p>
+<p>7.- Procurar conservar la temperatura ambiente dentro de tu casa entre dieciocho y veinte grados centígrados, para lo cual evita también la entrada de corrientes de aire.</p>
+<p>8.- Consume abundantes líquidos en forma de agua o jugos vegetales para mantener una buena humedad de tu cuerpo y evitar que tus fosas nasales se resequen.</p>
+<p>9.- No acudas a la automedicación ante los primeros signos de enfermedad.</p>
+<p>10.- Sigue al pie de la letra las indicaciones de tu médico para evitar otras complicaciones.</p>
+<p>A pesar de la frecuencia y naturalidad con que escuchamos hablar de las enfermedades respiratorias, anualmente poco más de cuatro millones de personas en el mundo mueren por su causa. De acuerdo a cifras de la Organización Mundial de la Salud (OMS), únicamente la gripe contagia a aproximadamente al veinte por ciento de la población durante las epidemias estacionales, con el registro de cinco millones de casos graves y quinientas mil muertes año. Cuida tu salud y la de tus seres queridos. Recuerda la salud es responsabilidad de todos.</p>
+<h3 id="httpsappsmediaccesscommxmediaccesswebwebcontenidowwwsaludmagazinecommxunderline">[https://apps.mediaccess.com.mx/MediAccessWeb/web/contenido/www.saludmagazine.com.mx]{.underline}</h3>
+<h4 id="tema-5-reproducci%C3%B3n-y-sexualidad">TEMA 5. Reproducción y Sexualidad</h4>
+<p><strong>Sexualidad</strong>. Es evidente que el hombre y la mujer somos físicamente diferentes, y que tenemos distintos papeles en la reproducción. Además, en los seres humanos existe un componente adicional a la reproducción; la sexualidad.</p>
+<p>Los humanos sentimos afecto, es decir, queremos a otras personas, independientemente del sexo.</p>
+<p>Manifestamos nuestra sexualidad de formas muy diversas, y no siempre buscando la reproducción. Este componente de la sexualidad nos hace distintos a los animales, y enriquece nuestra personalidad. En la sexualidad humana el cariño y la ternura permiten disfrutar de la relación sexual de una forma más completa, no limitándose ésta únicamente al coito. La forma de vivir y sentir la sexualidad está muy influenciada por la cultura y la educación de las personas.</p>
+<p>Cada persona tiene una identidad sexual que habitualmente coincide con su sexo biológico, a estas personas se les llama heterosexuales. En cambio, algunas personas sienten una identidad sexual distinta a la biológica, se denominan homosexuales. La identidad sexual es personal e íntima, y debe ser respetada por las demás personas.</p>
+<p><strong>Reproducción</strong> es una de las funciones vitales de todos los seres vivos, junto con la nutrición y la respiración, pero mientras que éstas aseguran la supervivencia del individuo, la reproducción asegura el mantenimiento de la especie. Mediante la reproducción los seres vivos obtienen descendientes iguales o similares a los progenitores</p>
+<h3 id="httpbiologiaygeologiaorgunidadbioesacn3reproduccionf41sexualidadyreproduccinhtmlunderline">[http://biologiaygeologia.org/unidadbio/esa/cn3/reproduccionf/41_sexualidad_y_reproduccin.html]{.underline}</h3>
+<p><strong>5.1 Características generales de la división celular por mitosis y meiosis</strong></p>
+<h3 id="mitosis-y-meiosis-los-tipos-de-divisi%C3%B3n-celular">Mitosis y meiosis: los tipos de división celular</h3>
+<p>Mientras que [la mitosis siempre da lugar a células con el mismo número de cromosomas]{.underline}, y además, idénticos a los de las células madre, [en el caso de la meiosis, el número de cromosomas es la mitad]{.underline} que en las células madre y, además, son diferentes, ya que se ha producido la recombinación genética. Otra diferencia importante es que la mitosis da lugar a dos células hijas y la meiosis a cuatro.</p>
+<p>La <strong><em>mitosis</em> se define como un proceso de división celular asociada a la división de las células somáticas</strong>. Las células somáticas de un organismo eucariótico son todas aquellas que no van a convertirse en células sexuales y por tanto, la mitosis da lugar a dos células exactamente iguales.</p>
+<p><strong>Fases de la mitosis</strong></p>
+<p>La <strong>interface es el tiempo que pasa entre dos mitosis o división del núcleo celular</strong>. Durante esta fase, sucede la duplicación del número de cromosomas (es decir, del ADN). Así, cada hebra de ADN forma una <strong>copia idéntica a la inicial</strong>. Las hebras de ADN duplicadas se mantienen unidas por el centrómero. La finalidad de esta duplicación es entregar a cada célula nueva formada la misma cantidad de material genético que posee la célula original. Además, también se duplican otros orgánulos celulares como, por ejemplo, los centriolos que participan directamente en la mitosis.</p>
+<p>Terminada la interface, empieza la división celular, así como la conocemos, formada por las cuatro fases: <strong>Profase, Metafase</strong>, <strong>Anafase</strong>, <strong>Telofase</strong>.</p>
+<p><em><strong>Profase</strong></em></p>
+<p>Durante la profase las hebras de ADN se condensan y van adquiriendo una forma determinada llamada [cromosoma]{.underline}. Desaparecen el involucro nuclear y el nucléolo. Los centriolos se ubican en puntos opuestos en la célula y comienzan a formar unos finos filamentos que en conjunto se llaman huso mitótico</p>
+<p><em><strong>Metafase</strong></em></p>
+<p>En la metafase las fibras del huso mitótico se unen a cada centrómero de los cromosomas. Estos se ordenan en el plano ecuatorial de la célula, cada uno unido a su duplicado</p>
+<p><em><strong>Anafase</strong></em></p>
+<p>En el anafase los pares de cromosomas se separan en los centrómeros y se mueven a lados opuestos de la célula. El movimiento es el resultado de una combinación del movimiento del centrómero a lo largo del micro túbulos del huso y la interacción física del micro túbulos polares</p>
+<p><em><strong>Telofase</strong></em></p>
+<p>Finalmente, en la telofase las cromátidas llegan a los polos opuestos de la célula y se forman así las nuevas membranas alrededor de los núcleos hijos. Los cromosomas se dispersan y ya no son visibles al microscopio óptico.</p>
+<p><img src="media/image12.jpg" alt="">{width=&quot;1.1408333333333334in&quot; height=&quot;1.2691666666666668in&quot;} <img src="media/image13.jpg" alt="">{width=&quot;1.2875in&quot; height=&quot;1.2066666666666668in&quot;} <img src="media/image14.jpg" alt="">{width=&quot;3.4166666666666665in&quot; height=&quot;1.2306506999125109in&quot;}</p>
+<p>[http://campus.ort.edu.ar/articulo/557834/banco-imagenes-mitosis-y-meiosis]{.underline}</p>
+<p>La <strong><em>meiosis</em> es el proceso de división celular mediante el cual se obtienen cuatro células hijas con la mitad de cromosomas</strong>. La meiosis se produce en dos etapas principales: meiosis I y meiosis II.</p>
+<p>La importancia evolutiva de la meiosis es fundamental ya que mediante este proceso se produce la recombinación genética, responsable de la variabilidad genética y en última instancia, de la capacidad de evolucionar de las especies.</p>
+<p><strong>Primera división meiótica:</strong></p>
+<p>En síntesis, <strong>en la primera división meiótica (meiosis I) se evidencian los cromosomas, cada uno de ellos formados por dos cromátidas</strong>.</p>
+<p><strong>Segunda división meiótica</strong></p>
+<p>La <strong>segunda división meiótica no incluye replicación del ADN.</strong> Los cromosomas formados por dos cromátidas, se desplazan a la línea ecuatorial y se pegan al huso mitótico: Las dos cromátidas de cada uno de los cromosomas se separan y migran a los polos.</p>
+<p>De este modo se forman <strong>cuatro células, cada una de ellas con un conjunto haploide de cromosomas</strong> y sobre todo con una variedad de distintos cromosomas (origen materno y paterno). Durante esta separación se verifica una distribución independiente de los cromosomas maternos y paternos, así que al final habrá una variedad diferente de cromosomas en las cuatro células hijas.</p>
+<h4 id="httpscienciaybiologiacommitosis-y-meiosis-la-division-y-reproduccion-celulaunderline">[https://cienciaybiologia.com/mitosis-y-meiosis-la-division-y-reproduccion-celula/]{.underline}</h4>
+<p><img src="media/image16.jpg" alt="">{width=&quot;5.3in&quot; height=&quot;5.243333333333333in&quot;}</p>
+<blockquote>
+<p><img src="media/image19.jpg" alt="">{width=&quot;4.84in&quot; height=&quot;2.816666666666667in&quot;}</p>
+</blockquote>
+<p>[https://es.khanacademy.org/science/biology/cellular-molecular-biology/meiosis/a/phases-of-meiosis]{.underline}</p>
+<h5 id="52-reproducci%C3%B3n-sexual-y-asexual">5.2 Reproducción sexual y asexual</h5>
+<p>Existen dos tipos de reproducción en la naturaleza**: asexual** y <strong>sexual</strong>.</p>
+<ul>
+<li>
+<p>En la <strong>asexual</strong>, un único progenitor obtiene individuos iguales a él.</p>
+</li>
+<li>
+<p>En la <strong>sexual</strong>, la unión de dos células llamadas gametos origina el nuevo individuo que será parecido a los progenitores, pero no igual. Las dos células que se unen procederán de un mismo progenitor (seres hermafroditas) o de dos progenitores distintos.</p>
+</li>
+</ul>
+<p>La <strong>reproducción humana es sexual</strong>, y se necesitan dos individuos de distinto sexo para tener descendencia, un hombre y una mujer.</p>
+<blockquote>
+<p>En la especie humana los gametos son los espermatozoides y los óvulos, y se forman en las gónadas (testículos y ovarios respectivamente).</p>
+</blockquote>
+<p>[http://biologiaygeologia.org/unidadbio/esa/cn3/reproduccionf/41_sexualidad_y_reproduccin.html]{.underline}</p>
+<h5 id="tipos-de-reproducci%C3%B3n">Tipos de reproducción</h5>
+<p>La <strong>función de reproducción</strong> es el proceso por el que los seres vivos dan lugar a nuevos seres semejantes a ellos. Todos los seres vivos se reproducen (animales, plantas, hongos, algas, protozoos y bacterias).</p>
+<p>Cuando hablamos de la reproducción utilizamos el término <strong>progenitores</strong> para referirnos a los seres vivos que participan en la reproducción, y <strong>descendientes</strong> para referirnos a los nuevos seres vivos que se forman.</p>
+<p>Hay dos tipos de reproducción: <strong>reproducción sexual</strong> y <strong>reproducción asexual</strong>, por lo que es necesario saber distinguir ambos tipos.</p>
+<p><strong>En la</strong> <strong>reproducción sexual</strong></p>
+<p>Participan dos progenitores, uno de sexo masculino y otro de sexo femenino. Los descendientes son una mezcla de las características de ambos progenitores. En la reproducción sexual intervienen órganos y células especializadas en la reproducción que forman el aparato reproductor.</p>
+<p><strong>En la</strong> <strong>reproducción asexual</strong></p>
+<p>Participa un solo progenitor. Los descendientes son idénticos al progenitor. En la reproducción asexual no intervienen células ni órganos especializados en la reproducción, sino que es una parte del cuerpo la que se separa y origina un nuevo individuo (Ej.: un brazo de una estrella puede formar una nueva estrella, los estolones de las plantas de fresas forman nuevas plantas, etc.).</p>
+<p>Los organismos unicelulares como las bacterias, los protozoos y las algas unicelulares se pueden reproducir asexualmente por <strong>bipartición, gemación o esporulación</strong>.</p>
+<p><strong>Bipartición:</strong> El progenitor se divide en dos células hijas idénticas más pequeñas que la inicial.</p>
+<p><strong>Gemación:</strong> El progenitor forma yema que se divide o duplica para convertirse en un nuevo organismo.</p>
+<p><strong>Esporulación:</strong> El núcleo de la célula madre se divide en núcleos pequeños (Muchos). Se rompe la membrana nuclear de la célula madre formando células hijas.</p>
+<p>[https://www.portaleducativo.net/octavo-basico/232/La-reproduccion-sexuada-y-asexuada]{.underline}</p>
+<h6 id="53-salud-reproductiva-y-anticonceptivos">5.3 Salud reproductiva y anticonceptivos</h6>
+<p>Las nuevas transformaciones que se están produciendo en el Sistema Nacional de Salud y particularmente en el nivel primario de atención han creado mejores condiciones para producir un cambio en materia de salud reproductiva y sexual, en el pensamiento y modo de actuar en los médicos de familia, en la ejecución de acciones integrales dirigidas no solo a las familias sino también a los individuos; con estas condiciones, podremos favorecer un mejor nivel de salud general de la población y, por ende, contribuir al desarrollo económico y social del país.</p>
+<p>En este contexto, la salud reproductiva es un elemento esencial, no solo como un reflejo de los niveles de salud de la niñez y la adolescencia o ésta como tal, sino que contribuye a determinar los niveles de salud más allá del período reproductivo para hombres y mujeres, y tiene ,además , marcados efectos intergeneracionales fundamentalmente a través de la mujer ya que ésta afecta y es afectada por otras variables del nivel de salud durante la infancia, y la adolescencia , los estilos de vida y el ambiente...</p>
+<p>La salud reproductiva tiene expresiones positivas por la sensación de bienestar que generan las relaciones entre los individuos y la satisfacción de tener un hijo sano y saludable ,entre otros, pero por otro lado existe un grupo de manifestaciones negativas expresadas en desviaciones de la salud incluso la muerte como resultado del proceso reproductivo, por ejemplo: enfermedades de transmisión sexual, la fertilidad no controlada, la morbilidad materna, los cánceres del aparato reproductor y el climaterio entre otros problemas de salud tienen que ser abordados de forma integral.</p>
+<p>Dentro de los grupos de riesgo de salud reproductiva, se encuentran las adolescentes dado por el inicio sexual precoz unido a la falta de conocimientos e información y a la separación que hay entre la madurez biológica, que tiende a adelantarse y la psicosocial que se ha desplazado a edades más avanzadas, además, con la presencia de sentimientos contradictorios en esta esfera se crea un problema que aún se incrementa más si se tiene en cuenta el aumento del aborto con sus complicaciones. Es preocupante también la presencia e incidencia de enfermedades de transmisión sexual, la escasez de uso de métodos anticonceptivos, la promiscuidad y hasta la realización de las relaciones sexuales en lugares inapropiados, con experiencias frustrantes que pueden conllevar a disfunciones sexuales posteriormente asociados a matrimonios, divorcios y deserción escolar...</p>
+<p>Un importante aporte al campo de salud reproductiva, lo constituye la información más actualizada sobre los métodos de planificación familiar. La planificación familiar ayuda a todos , en especial a la mujer y a la adolescente, brindándole protección contra embarazos no deseados, llegando a salvar las vidas de mujeres con alto riesgos para su salud si se embarazaran o de los abortos en circunstancias peligrosas. Además muchos de los métodos de planificación familiar reportan otros beneficios para la salud por ejemplo, algunos métodos hormonales ayudan a prevenir ciertos tipos de cáncer, y los condones contribuyen a prevenir enfermedades de transmisión sexual incluyendo VIH--SIDA.</p>
+<p>Por todo lo antes expuesto nos motivamos para realizar la siguiente revisión sobre los distintos métodos de anticoncepción disponibles en los servicios de planificación familiar para capacitar al personal de salud en su manejo y que éste sea capaz de transmitir esta información a las adolescentes y sus familiares para su mejor conocimiento y educarlos sobre los peligros del aborto y las enfermedades de transmisión sexual que repercuten negativamente en una adecuada salud reproductiva de las mismas.</p>
+<p><strong>CLASIFICACIÓN DE LOS ANTICONCEPTIVOS:</strong></p>
+<p>Los anticonceptivos se clasifican de acuerdo con el tiempo de duración de su efecto en transitorios (reversibles) o definitivos (irreversibles).</p>
+<p>Hoy en día se hace difícil poder ubicar en cada grupo los distintos anticonceptivos, porque en la práctica se combinan muchos de ellos en busca de una mayor efectividad.</p>
+<p><strong>Podemos dividirlos de la siguiente forma:</strong></p>
+<p><strong>1.-Métodos de Barrera:</strong></p>
+<p>a)  Espermicidas: cremas, jaleas, aerosoles de espumas, supositorios ó tabletas espumantes y supositorios solubles.</p>
+<p>b)  Mecánicos sin medicar: condón, diafragma, capuchón, escudo vaginal ó condón femenino.</p>
+<p>c)  Mecánicos medicados: esponjas vaginales.</p>
+<p><strong>2.-Dispositivos Intrauterinos:</strong></p>
+<p>a)  Inertes</p>
+<p>b)  Bioactivos ó medicamentosos.</p>
+<p><strong>3.-Hormonales:</strong></p>
+<p>a)  Locales</p>
+<p>b)  Orales: combinados ó progestágenos solo</p>
+<p>c)  Sistémicos: inyectables ó implantes.</p>
+<p><strong>4.-Biológicos:</strong></p>
+<p>a)  Abstinencia Periódica</p>
+<p>b)  Coito Interrupto</p>
+<p>c)  Método de Lactancia Materna Exclusiva --Amenorrea (MELA).</p>
+<p><strong>5.-Quirúrgicos:</strong></p>
+<p>a)  Femeninos</p>
+<p>b)  Masculinos</p>
+<p><strong>Se dice que el anticonceptivo ideal debe reunir los siguientes requisitos: (7)</strong> - Eficaz en el 100% de las parejas que lo utilicen.</p>
+<ul>
+<li>
+<p>Inocuo, es decir, que no produzca efectos secundarios en los usuarios.</p>
+</li>
+<li>
+<p>Reversible, o sea, que se recupera la fertilidad una vez interrumpido su uso en un período inferior a 2 años.</p>
+</li>
+<li>
+<p>Aplicable: fácil manejo y aceptable por la pareja. - Económico...</p>
+</li>
+</ul>
+<p>[http://www.ilustrados.com/tema/10482/Salud-reproductiva-Metodos-anticonceptivos-utilizadosplanificacion.html]{.underline}</p>
+<p><strong>5.4 Enfermedades de transmisión sexual. Agentes causales, principales síntomas y medidas de prevención.</strong></p>
+<p>La historia del hombre se ha caracterizado por la búsqueda de su bienestar individual y social con ejercicio libre y total de sus necesidades e intereses en un contexto biológico, psicológico y social. Uno de estos intereses es el disfrute pleno de la sexualidad lo que se refleja en las diferentes culturas a través de experiencias muy variadas, con el objetivo de alcanzar el máximo placer sexual. Es por esto que también desde la antigüedad, las enfermedades de transmisión sexual han sido un problema de salud pública, por la mortalidad y graves complicaciones que han afectado no sólo al individuo y su familia, sino a poblaciones completas.</p>
+<p>Las enfermedades de transmisión sexual (ETS) son conocidas también como enfermedades venéreas (en honor a la diosa romana Venus que es el equivalente a la diosa griega del amor y la belleza Afrodita) y su definición obedece al modo de transmisión de las mismas ya que se adquieren mediante el contacto sexual: vaginal, anal u oral.</p>
+<p>Todas las conductas sexuales que involucran contacto con otra persona o con los fluidos de la misma se considera como factor de riesgo para la adquisición de ETS. (1) Aunque la probabilidad de transmitir estas infecciones varía dependiendo de la actividad sexual; en general, cualquier relación sexual entre dos o más personas predispone a adquirirlas...</p>
+<p>Así podemos considerar que los factores que influyen en la transmisión de este tipo de enfermedades en la actualidad son:</p>
+<ul>
+<li>
+<p>Edad más temprana de inicio de la vida sexual: si se es más joven, hay más posibilidades de tener un mayor número de compañeros sexuales a lo largo de la vida.</p>
+</li>
+<li>
+<p>Cambios frecuentes y repetidos de compañeros sexuales.</p>
+</li>
+<li>
+<p>Desigual relación de poder entre los géneros masculino y femenino que originan casi siempre la subordinación de la mujer.</p>
+</li>
+<li>
+<p>Imposibilidad de gozar una sexualidad, creativa, amorosa y responsable por la privación de la educación sexual integral en el seno familiar y escolar.</p>
+</li>
+<li>
+<p>El sexo comercial, frecuentemente asociado a otros factores de riesgo como son migración, uso de drogas lícitas e ilícitas.</p>
+</li>
+<li>
+<p>Edad y multiparidad frecuentemente asociados a una mayor susceptibilidad a las infecciones.</p>
+</li>
+<li>
+<p>Movilidad poblacional por necesidades de empleo, educación y salud.</p>
+</li>
+<li>
+<p>Los comportamientos sexuales dependen en gran medida de la situación económica de un país y de su contexto cultural. Cuando este cambia, se modifican las normas, valores y comportamientos relativos a la sexualidad en sus diversos aspectos.</p>
+</li>
+<li>
+<p>Desintegración familiar.</p>
+</li>
+<li>
+<p>Automedicación.</p>
+</li>
+<li>
+<p>Carencia de una cultura de prevención, principalmente el uso profiláctico del condón, la consulta médica temprana para diagnóstico y tratamiento, la adherencia al mismo y la referencia de los contactos que constituyen factores determinantes en la limitación de la transmisión.</p>
+</li>
+<li>
+<p>Ignorancia, muy particular en nuestro medio, del problema que representan las ETS.</p>
+</li>
+<li>
+<p>Existe sinergia y sincronismo de las ETS, algunas actúan como factores de riesgo para la aparición de otras (ejemplo: la gonorrea puede reactivar las infecciones latentes por Chlamydia trachomatis, esta última a su vez favorece la infección concomitante del virus del papiloma humano e incrementa la susceptibilidad a infecciones bacterianas).</p>
+</li>
+<li>
+<p>La falta de circuncisión ha sido asociada a una mayor frecuencia de ciertas ETS: VIH, chancroide, sífilis, herpes genital y condiloma acuminado. La hipótesis de esta asociación es que el glande no se encuentra queratinizado y que por tanto está expuesto al trauma físico y a la infección, además de que la piel redundante del prepucio es un reservorio que permite la mayor replicación de los agentes infecciosos mencionados.</p>
+</li>
+<li>
+<p>Susceptibilidad individual a las infecciones y propiedades cambiantes de los patógenos...</p>
+</li>
+</ul>
+<p><strong>SÍFILIS.</strong></p>
+<p>La sífilis se conoce también como lúes, mal gálico o mal napolitano, es una enfermedad crónica adquirida por contacto sexual (aunque también debe tenerse en cuenta la infección prenatal), causada por <em>Treponema pallidum</em> y caracterizada por una variedad de manifestaciones clínicas ya que puede afectar prácticamente todas las estructuras del organismo; es una enfermedad intermitente que tiene períodos de actividad (fase primaria, secundaria y terciaria) y periodos prolongados de latencia. (13)</p>
+<p>La sífilis se distribuye mundialmente y es particularmente problemática en países subdesarrollados donde representa una de las principales causas de úlceras en genitales</p>
+<p>La transmisión ocurre mediante la penetración de la espiroqueta en las membranas mucosas o abrasiones en las superficies epiteliales. El tiempo de incubación desde la exposición a la aparición de las lesiones primarias es en promedio de 3 semanas con un rango de 10 a 90 días. La <strong>lesión primaria es una pápula asintomática</strong> que al paso del tiempo sufre necrosis superficial convirtiéndose en una ulceración bien circunscrita denominada <strong>chancro</strong> (Figura 1), ésta siempre aparecerá en el sitio de contacto primario o de inoculación, y puede acompañarse de linfadenopatía inguinal. Este período conocido también como primario es autor resolutivo, es decir, el chancro desaparece en 3 a 12 semanas en forma espontánea.</p>
+<p>Posteriormente hay diseminación linfática y sanguínea del microorganismo y la enfermedad pasa a una etapa latente asintomática. Dos a tres meses después aparece la expresión de esta septicemia, el secundarismo, que dura varias semanas y se manifiesta por un amplio espectro de lesiones en piel y síntomas generales con linfadenopatía generalizada (Figura 2 y 3). En este momento el enfermo es altamente contagioso aún al tacto de las lesiones ya que estas contienen una gran cantidad de espiroquetas. Es también en este periodo que las mujeres embarazadas y contagiadas pueden infectar al feto vía transplacentaria.</p>
+<p>A continuación se presenta un período de latencia que es el tiempo entre la resolución de las lesiones clínicas y la aparición de las manifestaciones tardías de la enfermedad, y puede durar años inclusive. Aproximadamente el 70% de los individuos que no han recibido tratamiento permanecerán en este estadio por el resto de sus vidas. La sífilis latente, se divide en temprana (cuando dura menos de un año) o tardía (duración de más de un año) y típicamente encontramos serología positiva con anticuerpos específicos al <em>T. pallidum</em> y el paciente se encuentra asintomático.</p>
+<p><strong>GONORREA O BLENORRAGIA.</strong></p>
+<p>La gonorrea junto con la sífilis, eran las enfermedades de transmisión sexual más frecuentes, afortunadamente la incidencia ha disminuido al igual que otras ETS con la aparición de los antibióticos. Es conocida también como blenorragia y el agente causal es <em>Neisseria gonorrhoeae</em> (el cual tiene tropismo por las mucosas), y cabe aclarar que el humano es el único huésped conocido. (23) Puede causar uretritis, cervicitis, epididimitis, faringitis, proctitis, enfermedad pélvica inflamatoria y en los casos graves diseminación sistémica.</p>
+<p>La gonorrea se transmite en la mayoría de los casos mediante relaciones sexuales, ya sea por vía oral, anal o vaginal. También puede ser contagiada mediante fómites a otras áreas, por ejemplo a un ojo con la mano o con otra parte del cuerpo humedecida con líquidos infectados. (14) Si una [mujer]{.underline} embarazada está infectada, durante el paso por el canal del parto, el producto adquiere la infección manifestándose como conjuntivitis, vulvovaginitis e inclusive neumonía, por lo tanto, en estos casos estaría indicado el parto por cesárea.</p>
+<p>Las manifestaciones de esta ETS aparecen de 2 a 5 días posterior al contacto de sexual, y el espectro de presentación es muy amplio, desde la infección asintomática, síntomas locales en mucosas hasta la diseminación sistémica.</p>
+<p>En los hombres, lo más común es que el paciente presente una uretritis anterior con disuria (que es más frecuente durante la mañana) y una descarga uretral purulenta característica.</p>
+<p>La sintomatología en la mujer puede ser vaga o es confundida con una infección de vías urinarias o vaginal. El primer sitio afectado es generalmente el canal endocervical y los síntomas iniciales son disuria, descarga vaginal purulenta y hemorragia entre los períodos menstruales. Es importante mencionar que debe darse tratamiento a las parejas sexuales de los pacientes, y recordarles que no pueden tener relaciones sexuales hasta que se haya completado el tratamiento y las parejas sexuales hayan sido tratadas.</p>
+<h2 id="linfogranuloma-ven%C3%A9reo">LINFOGRANULOMA VENÉREO</h2>
+<p>El linfogranuloma venéreo también conocido como enfermedad de Durand-Nicolás-Favre o como linfogranuloma inguinal es una enfermedad causada por <em>Chlamydia trachomatis</em>, que históricamente se ha confundido con otras enfermedades que se acompañan de úlceras y linfadenopatía tales como sífilis, infección por el virus del herpes simple y chancroide.</p>
+<p>La infección ocurre después del contacto directo con la piel o las membranas mucosas de la pareja sexual infectada. El microorganismo <em>(C. trachomatis)</em> no penetra la piel intacta, se necesita que exista una solución de continuidad para que pueda hacerlo; viaja por los vasos linfáticos hasta los ganglios donde se replica dentro de los macrófagos e inicia la respuesta inflamatoria. A pesar que la mayoría de los casos son predominantemente por contacto sexual, también hay casos de infección por accidentes de laboratorio, fómites o contacto directo.</p>
+<p>El linfogranuloma venéreo ocurre en tres etapas. En la primera, que puede ser asintomática y pasar desapercibida, aparece una pápula no dolorosa en el sitio de inoculación que rápidamente se convierte en pústula y se ulcera (chancro de inoculación) con resolución espontánea de la misma en una semana aproximadamente.</p>
+<p>La segunda etapa se presenta de 2 a 6 semanas después de la lesión primaria y consiste en linfadenopatía inguinal.</p>
+<p>Finalmente, la tercera, que es más frecuente en mujeres y aparece años después de la infección, se manifiesta como proctocolitis y otros padecimientos rectales.</p>
+<p><strong>CHANCROIDE.</strong></p>
+<p>Es conocido también como chancro blando o <em>ulcus molle</em>. Esta enfermedad se caracteriza por úlceras genitales dolorosas e invasión regional a los ganglios linfáticos con formación de bubones sin manifestaciones sistémicas. La característica de estas úlceras es que son blandas (de ahí su nombre) con fondo sucio y rápidamente necrosantes. Las lesiones se pueden auto inocular a otras áreas del cuerpo muy fácilmente.</p>
+<p>El agente causal es <em>Haemophilus ducreyi</em>, una bacteria Gram negativa anaerobia facultativa.</p>
+<p>El periodo de incubación es entre 3 y 10 días. Se inicia con la aparición de una pápula rodeada de eritema la cual se transforma con rapidez en pústula y deja una ulceración muy dolorosa, bien limitada y no indurada que tiene aspecto de tejido de granulación con base necrótica en la mayoría de los casos y un exudado de aspecto sucio.</p>
+<p>Se localiza principalmente en genitales y región perianal. En hombres se puede encontrar en prepucio, en el surco coronal o en el frenillo, y no es raro que exista un edema importante del prepucio. En mujeres, la localización más frecuente es el introito vaginal, aunque también se encuentra en el cérvix o el área perianal. En una frecuencia menor se encuentra en localización extra genital. Puede ocurrir linfadenopatía dolorosa regional hasta en el 50% de los casos.</p>
+<p><strong>INFECCIÓN POR VIRUS DEL HERPES SIMPLE.</strong></p>
+<p>El virus del herpes simple es un microorganismo patógeno que causa infección orolabial (VHS-1) y genital (VHS2) caracterizadas por erupciones vesiculares primarias y recurrentes. Estos dos tipos: el virus del herpes simple tipo 1 y 2, que aunque están estrechamente relacionados en cuanto a morfología y patogenicidad, difieren epidemiológicamente.</p>
+<p>Las infecciones por el VHS-1 se presentan con gran variabilidad y la regla es que se observen hasta en el 80% de los casos en forma asintomática; se desconoce el número exacto de personas infectadas ya que se considera que más del 95% de la población mundial tiene anticuerpos contra este virus que contrajo en el 1er año de vida.</p>
+<p>En el sitio de entrada del virus, que generalmente son los genitales externos aparecen vesículas que se agrupan sobre una base eritematosa, éstas fácilmente progresan a pústulas y úlceras. No es infrecuente encontrar durante la primo infección una balanitis erosiva, vulvitis o vaginitis. En las mujeres las lesiones también pueden encontrarse en cérvix, nalgas y perineo.</p>
+<p>Al ser una ETS recidivante pero autor resolutiva a corto plazo, el tratamiento es generalmente sintomático con analgésicos, aplicación de compresas frías, y medidas adecuadas de higiene.</p>
+<p><strong>VERRUGAS VULGARES GENITALES.</strong></p>
+<p>Las verrugas vulgares genitales son la manifestación epidérmica atribuida a la infección por <strong>el virus del</strong> <strong>papiloma humano (VPH).</strong> El VPH es un grupo de virus de DNA que están ampliamente distribuidos en animales y en los humanos, y se conocen actualmente más de 100 serotipos. Las variedades denominadas de alto riesgo, VPH-16 y VPH-18 se reconocen como agentes etiológicos primarios para cáncer cervicouterino en la mujer. Con el número creciente de pacientes inmunosuprimidos, las infecciones por VPH tienden a persistir e incrementar el riesgo de desarrollar neoplasias malignas...</p>
+<p>El condiloma acuminado también es conocido como verruga ano genital, es la presentación de infección por el VPH en las mucosas de esas áreas. Estas verrugas se presentan como neo formaciones exofíticas, pequeñas, discretas, verrugosas que dan el aspecto de &quot;coliflor&quot;; (Figura 8) pueden ser del color de la piel, hasta el rosado o francamente eritematoso. Generalmente son menores a un centímetro.</p>
+<p>A pesar de ser lesiones benignas, los condilomas acuminados resultan inaceptables para el paciente, y sabemos que si no se tratan adecuadamente pueden crecer pero sobre todo diseminarse por auto inoculación y contagiar a la pareja sexual.</p>
+<p><strong>MOLUSCO CONTAGIOSO.</strong></p>
+<p>El molusco contagioso (MC), causado por el virus del molusco contagioso (VMC) que pertenece a la familia de los <em>Poxvirus</em> es una infección cutánea y de las membranas mucosas que afecta predominantemente a niños y jóvenes adultos. En este caso será considerado como ETS y se presentará en áreas genitales o peri genitales.</p>
+<p>Las lesiones de molusco contagioso que se producen por contacto sexual se localizan preferentemente en la parte interna de los muslos, pubis, prepucio y región perineal. Se trata de neo formaciones de 2 a 6mm de diámetro, semiesféricas, duras, del color de la piel o blanco-amarillentas, translúcidas y umbilicadas. El diagnóstico es básicamente clínico. Las lesiones de molusco contagioso pueden tratarse exitosamente con curetaje. [http://www.facmed.unam.mx/sms/seam2k1/2008/ago_01_ponencia.html]{.underline}</p>
+<h2 id="vih">VIH</h2>
+<p>¿Qué es el VIH? El VIH es el causante del SIDA. El virus afecta el sistema inmunitario de tal manera que la persona se vuelve más propensa a enfermarse. El VIH se propaga en las relaciones sexuales, pero los condones brindan protección.</p>
+<p>La infección por VIH/SIDA es grave</p>
+<p>VIH significa virus de inmunodeficiencia humana. Se trata de un virus que destruye determinadas células del sistema inmunitario (la defensa del cuerpo contra las enfermedades que nos ayuda a mantenernos sanos). Cuando el VIH daña el sistema inmunitario, es más fácil enfermarse de gravedad e incluso morir a causa de infecciones que el cuerpo normalmente podría combatir...</p>
+<p>Una vez contraído el virus, este permanece en el organismo de por vida. No existe cura para la infección por VIH, pero hay medicamentos que ayudan a mantenerse sano durante más tiempo y que disminuyen las posibilidades de contagiar a otras personas. El tratamiento es muy importante (por eso, [es vital realizar las]{.underline} [pruebas]{.underline}). Prácticamente todas las personas que tienen VIH y no se tratan mueren a causa del virus. Pero con medicamentos, los infectados por VIH pueden mantenerse sanos y vivir muchos años.</p>
+<p>VIH es el virus que se transmite de persona a persona. Con el correr del tiempo, el VIH destruye un importante tipo de células del sistema inmunitario (denominadas células CD4 o células T) que nos protegen de las infecciones. Cuando alguien no tiene suficientes células CD4, el cuerpo no puede combatir las infecciones de la manera en que lo haría normalmente.</p>
+<p>El SIDA es una enfermedad causada por el daño que el VIH produce en el sistema inmunitario. Una persona tiene SIDA cuando contrae infecciones raras y peligrosas o tiene un número extremadamente bajo de células CD4. El SIDA es la fase más grave de la infección por VIH y, con el tiempo, termina provocando la muerte.</p>
+<p>Sin tratamiento, usualmente transcurren 10 años desde que se contrae el VIH hasta la aparición del SIDA. El tratamiento desacelera el daño que causa el virus y ayuda a que los infectados se mantengan sanos durante varias décadas antes de que se manifieste el SIDA.</p>
+<p>¿Cómo se contagia la infección por VIH/SIDA?</p>
+<p>El VIH es transportado en el semen, las secreciones vaginales, la sangre y la leche materna. El virus ingresa en el cuerpo a través de cortes o heridas en la piel y a través de las membranas mucosas (como el interior de la vagina, el recto y la abertura del pene). Se contrae el VIH por:</p>
+<ul>
+<li>
+<p>Tener sexo vaginal o anal</p>
+</li>
+<li>
+<p>Compartir agujas o jeringas para drogarse, hacerse perforaciones en el cuerpo, tatuajes, etc.</p>
+</li>
+<li>
+<p>Ser punzado con una aguja que tiene sangre infectada con el VIH</p>
+</li>
+<li>
+<p>Tener heridas o ampollas abiertas que entran en contacto con sangre, semen (esperma) o secreciones vaginales infectadas con VIH...</p>
+</li>
+</ul>
+<p>El VIH no se transmite por la saliva, de modo que nadie se contagia por dar un beso, compartir alimentos o bebidas, o usar el mismo tenedor o la misma cuchara. El VIH tampoco se contagia por abrazarse, darse la mano, toser o estornudar. Y tampoco puedes infectarte por sentarte en el inodoro.</p>
+<h3 id="httpswwwplannedparenthoodorgesptemas-de-saludenfermedades-de-transmision-sexualvihsidasthashfx33m4jsdpufunderline">[https://www.plannedparenthood.org/esp/temas-de-salud/enfermedades-de-transmision-sexual/vihsida#sthash.Fx33m4js.dpuf]{.underline}</h3>
+<p>La educación sexual y la participación en el autocuidado de la salud sexual son procedimientos considerados como altamente efectivos. La abstinencia sexual durante la presencia de lesiones activas o durante los lapsos de tratamiento, tanto para el paciente como para la pareja sexual, es un procedimiento que propicia la curación y evita la transmisión. El uso correcto del condón es una alternativa igualmente confiable para evitar la transmisión de estas infecciones. Por otra parte, se hacen esfuerzos para obtener algunas vacunas en contra de las ETS como puede ser para el VIH;(100) sin embargo, los trabajos de campo no permiten predecir cuándo se tendrán disponibles vacunas eficientes, por lo menos para la población que se encuentra en mayor riesgo de adquirirlas.</p>
+<p>[http://www.facmed.unam.mx/sms/seam2k1/2008/ago_01_ponencia.html]{.underline}</p>
+<h4 id="6-gen%C3%A9tica-tecnolog%C3%ADa-y-sociedad">6. Genética, tecnología y sociedad</h4>
+<p>Desde el origen de la agricultura y la ganadería, el ser humano ha manipulado plantas y animales para mejorar sus propiedades y obtener beneficios, así que es una práctica antigua.</p>
+<p>La manipulación genética modifica no solo los fenotipos sino los genotipos, a través de la biotecnología, que utiliza seres vivos o sustancias obtenidas de ellos para crear productos de valor para el ser humano. Sus principales objetivos son obtener mejores medicamentos y alimentos, y curar y prevenir enfermedades.</p>
+<p>En la actualidad y gracias al conocimiento de la estructura del ADN y la relación entre el genotipo y el fenotipo de las especies, aunado a las técnicas micro biológicas, los científicos han podido modificar seres vivos de diferentes especies con la manipulación de sus genes; es lo que se conoce como ingeniería genética.</p>
+<p>[https://prezi.com/fcks7ib26u37/biologia-tecnologia-y-sociedad/]{.underline}</p>
+<h5 id="61-fenotipo-genotipo-cromosomas-y-genes">6.1 Fenotipo, genotipo, cromosomas y genes</h5>
+<p>Gregor Mendel en 1866 fue capaz de deducir las tres leyes básicas de la herencia de las características. Sin conocer como era el material genético (ADN) ni saber cómo se transmitía, fue capaz de ver y poder explicar cómo se heredan las características de generación en generación. Esto lo convirtió en el padre de la Genética como ciencia. Ver INTERPRETACION DE LAS LEYES DE MENDEL. Esta ciencia ha sido una de las que mayor trascendencia alcanzó en el siglo pasado y en éste ya que hoy en día podemos explicar todas las leyes de Mendel conociendo como se forman los gametos (meiosis). A posteriori de sus descubrimientos fueron surgiendo otros ejemplos de mecanismos de herencia de los genes, los genes ligados.</p>
+<p>Luego nacen la citogenética y sus aplicaciones en el diagnóstico (cariotipo o estudio de los cromosomas) e incluso el estudio de las alteraciones que producen los cambios en el número o morfología de los cromosomas.</p>
+<p>[https://prezi.com/fcks7ib26u37/biologia-tecnologia-y-sociedad/]{.underline}</p>
+<p>Para establecer una relación entre Genotipo y Fenotipo, se definirán ambos términos:</p>
+<h4 id="genotipo">Genotipo</h4>
+<p>Corresponde a la constitución genética de una sola célula o de un organismo con referencia a una sola característica o a un conjunto de características; la suma total de todos los genes de un individuo.</p>
+<h4 id="fenotipo">Fenotipo</h4>
+<p>Corresponde a las características observables de un organismo que resulta de las interacciones entre el genotipo y el ambiente.</p>
+<p>La relación de genotipo y fenotipo en sus distintos niveles se presenta en la siguiente secuencia de conceptos:</p>
+<ul>
+<li>
+<p>El fenotipo de un organismo depende del fenotipo de sus partes, que a su vez está determinado por el fenotipo de sus células componentes.</p>
+</li>
+<li>
+<p>El fenotipo de una célula está determinado por su química interna, que es controlada por las enzimas que catalizan sus reacciones metabólicas.</p>
+</li>
+<li>
+<p>La función de una enzima depende de su estructura tridimensional específica, además depende de su secuencia lineal específica de aminoácidos.</p>
+</li>
+<li>
+<p>Las enzimas y las proteínas estructurales, presentes en una célula, están determinadas por el genotipo de la célula.</p>
+</li>
+<li>
+<p>Los genes especifican la secuencia lineal de aminoácidos en las proteínas y por lo tanto los genes determinan el fenotipo.</p>
+</li>
+<li>
+<p>El fenotipo está determinado por el genotipo más la acción ambiental.</p>
+</li>
+</ul>
+<p>El genoma humano es la totalidad de la información del Homo sapiens, es decir, la secuencia de ADN contenida en 23 pares de cromosomas en el núcleo de cada célula humana diploide y la secuencia del ADN mitocondrial.</p>
+<p>[https://www.blogdebiologia.com/relacion-entre-genotipo-y-fenotipo.html]{.underline}</p>
+<h4 id="cromosomas-y-genes">Cromosomas y genes</h4>
+<ol>
+<li>
+<p>Los cromosomas y los genes Los cromosomas son cadenas de ADN superen rolladas, compuestas por moléculas unidas como las cuentas de un collar. Cada cierto número de cuentas constituye un gen, es decir, un determinado trozo de ADN. Los genes portan la información que permitirá crear un nuevo organismo y la transmiten mediante un código químico. Existen genes para el tamaño, el color, la forma, etc. Cada cromosoma contiene numerosos genes.</p>
+</li>
+<li>
+<p>Los cromosomas y los genes Un gen es un fragmento de ADN que lleva la información para un carácter hereditario. El conjunto de genes que determina todos los caracteres hereditarios de una especie recibe el nombre de genoma.</p>
+</li>
+<li>
+<p>En el ADN están impresas las instrucciones que necesita un ser vivo para nacer y reproducirse. 4. Los cromosomas pueden compararse con un lápiz de memoria, un CD o cualquier otro soporte físico de almacenamiento de datos informáticos. Los datos o archivos (la información), podrían compararse con los genes. Al igual que en un CD o lápiz de memoria caben muchos datos, en los cromosomas hay muchísima información (se calcula que hay unos 100.000 genes en la especie humana).</p>
+</li>
+</ol>
+<p>[https://es.slideshare.net/iessuel/cromosomas-y-genes]{.underline}</p>
+<p>Los cromosomas son un componente celular que solo se forman cuando la célula está en división, ya sea por mitosis o por meiosis. Su estructura es en forma de hilo, constituyendo una cadena lineal más o menos alargada. Los cromosomas están compuestos por ácidos nucleicos y proteínas. Son los encargados de transportar el ADN (ácido desoxirribonucleico) y los genes durante la división celular.</p>
+<p>Un [gen]{.underline} es uno o varios fragmentos de ADN en funcionamiento, con información que codifica una característica determinada. Un cromosoma es la forma de transportar un conjunto de genes. A los genes que están juntos en un mismo cromosoma se les llama genes ligados. El ser humano tiene 23 pares de cromosomas.</p>
+<p>[http://www.enciclopediasalud.com/categorias/ecologia-biologia-y-biomedicina/articulos/cromosomascromatina-y-genes]{.underline}</p>
+<p><strong>6.2 Métodos, beneficios y riesgos de la manipulación genética</strong></p>
+<h4 id="ingenier%C3%ADa-gen%C3%A9tica">Ingeniería Genética</h4>
+<p>Se llama ingeniería genética a una serie de técnicas que permiten la transferencia programada de genes entre distintos organismos. Consiste en una reunión artificial de moléculas de DNA con la finalidad de aislar genes o fragmentos de DNA, clonarlos e introducirlos en otro genoma para que se expresen. La ingeniería genética se puede describir como la formación de nuevas combinaciones de genes por el aislamiento de un fragmento de DNA, la creación en él de determinados cambios y la reintroducción de este fragmento en el mismo organismo o en otro. Cuando los genes nuevos son introducidos en las plantas o animales, los organismos resultantes pasan a llamarse transgénicos y los genes introducidos transgenes.</p>
+<p>La ingeniería genética como tal no es una ciencia, sino un compendio de técnicas para aislar y modificar los genes. También se conoce con el nombre de técnica del ADN recombinante. Se refiere a todos los procedimientos por los cuales una molécula de ADN es cortada en un lugar determinado y luego &quot;pegada&quot; (con el mismo u otro fragmento) mediante el uso de ciertas enzimas de existencia natural en microorganismos (enzimas de restricción ligasas); también se refiere a procedimientos para multiplicar una molécula determinada de ADN (o un fragmento de ella), mediante su incorporación a elementos autor reproducibles en microorganismos. La ingeniería genética no es una sola cosa, sino un conjunto de técnicas: Extracción del DNA Transcriptasa inversa Reacción en cadena de la polimerasa (PCR) Hibridación molecular de los ácidos nucleicos: Southern blot, Northern blot y Dot Blot Clonación Técnicas Extracción del DNA. Para poder extraer el DNA.</p>
+<p><strong>Biotecnología.</strong></p>
+<p>Consiste en alterar los genomas de los seres vivos para dotarles de alguna cualidad que no tenían (plantas resistentes a heladas, frutas que maduran antes, cultivos que crecen más). Las aplicaciones de la ingeniería genética pueden ser divididas en cinco áreas de trabajo.</p>
+<p>La ingeniería genética puede usarse:</p>
+<p>En microorganismos</p>
+<p>En las plantas</p>
+<p>En los animales</p>
+<p>En células cultivadas de animales, plantas o humanos</p>
+<p>En humanos Microorganismos manipulados por ingeniería</p>
+<p>[https://pochicasta.files.wordpress.com/2009/05/manipulacion-genetica.pdf]{.underline}</p>
+<p><strong>¿CUALES SON LOS BENEFICIOS Y RIESGOS DE LA MANIPULACION GENETICA EN LA AGRICULTURA?</strong></p>
+<p>Ventajas. Entre las principales ventajas de la biotecnología se tienen:</p>
+<ul>
+<li>
+<p>Rendimiento superior. Mediante los OGM el rendimiento de los cultivos aumenta, dando más alimento por menos recursos, disminuyendo las cosechas perdidas por enfermedad o plagas así como por factores ambientales.</p>
+</li>
+<li>
+<p>Reducción de pesticidas. Cada vez que un OGM es modificado para resistir una determinada plaga se está contribuyendo a reducir el uso de los plaguicidas asociados a la misma que suelen ser causantes de grandes daños ambientales y a la salud.</p>
+</li>
+<li>
+<p>Mejora en la nutrición. Se puede llegar a introducir vitaminas y proteínas adicionales en alimentos así como reducir los alérgenos y toxinas naturales. También se puede intentar cultivar en condiciones extremas lo que auxiliaría a los países que tienen menos disposición de alimentos.</p>
+</li>
+<li>
+<p>Mejora en el desarrollo de nuevos materiales.</p>
+</li>
+</ul>
+<p>La aplicación de la biotecnología presenta riesgos que pueden clasificarse en dos categorías diferentes: los efectos en la salud de los monos que son los humanos y de los animales y las consecuencias ambientales. Además, existen riesgos de un uso éticamente cuestionable de la biotecnología moderna.</p>
+<p>Riesgos para el medio ambiente. Entre los riesgos para el medio ambiente cabe señalar la posibilidad de polinización cruzada, por medio de la cual el polen de los cultivos genéticamente modificados (GM) se difunde a cultivos no GM en campos cercanos, por lo que pueden dispersarse ciertas características como resistencia a los herbicidas de plantas GM a aquellas que no son GM. Esto que podría dar lugar, por ejemplo, al desarrollo de maleza más agresiva o de parientes silvestres con mayor resistencia a las enfermedades o a los estreses abióticos, trastornando el equilibrio del ecosistema.</p>
+<p>[https://es.scribd.com/doc/89118613/Cuales-Son-Los-Beneficios-y-Riesgos-de-La-Manipulacion-Genetica-enLa-Agricultura]{.underline}</p>
+<p>La evidencia científica indica que las aplicaciones en gran escala de la ingeniería genética pueden:</p>
+<p>1.- ser dañinas para la salud humana.</p>
+<p>2.- amenazar al ecosistema mundial.</p>
+<p>3.- ser socialmente destructivas.</p>
+<p>Estos peligros surgen debido a que la ingeniería genética de línea germinal altera los genes del embrión o células reproductivas de un organismo. En consecuencia, los genes alterados pasarán a todas las generaciones siguientes. Los errores y efectos secundarios causados por las manipulaciones genéticas entrarán en la base genética de esas especies y se perpetuarán creando nuevas enfermedades genéticas. Además los organismos modificados genéticamente pueden potencialmente tener enormes e impredecibles efectos sobre el ecosistema. Habrá efectos mucho más dañinos penetrantes y de larga duración de los que produce la contaminación química o incluso la contaminación nuclear.</p>
+<p>Esto equivale a contaminación genética y es una invitación a una alteración ecológica desastrosa.</p>
+<p>[http://thegeneticengineering.blogspot.mx/2012/04/durante-los-ultimos-10-anos-la.html]{.underline}</p>
+
+</body>
+</html>

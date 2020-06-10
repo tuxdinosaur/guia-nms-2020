@@ -1,5 +1,6 @@
+# Biología
 
-## Tema 1. El Valor de la Biodiversidad 
+## Tema 1. El Valor de la Biodiversidad
 
 La biodiversidad o **diversidad biológica** se refiere a la extensa variedad de seres vivos existentes en el planeta, es también un sistema dinámico que está en evolución constante. Este término proviene de la contracción inglesa **"biological diversity"**, y se le atribuye **Walter G. Rosen** el cual lo mencionó por primera vez en una conferencia en 1986.**La distribución de la biodiversidad** viene como consecuencia de factores evolutivos en el área **biológica, geográfica y ecológica,** por consiguiente cada especie posee un entorno adecuado a sus necesidades en donde cada uno de estos pueden relacionarse de manera armoniosa con el medio que lo rodea.
 
@@ -11,17 +12,17 @@ Para la preservación de la biodiversidad lo primero que hay que hacer es contro
 
 [http://conceptodefinicion.de/biodiversidad]{.underline}
 
-### 1.1 Características comunes de los seres vivos 
+### 1.1 Características comunes de los seres vivos
 
 Los seres vivos se definen tradicionalmente como todos aquellos seres que se nutren, se relacionan y pueden reproducirse. Pero todos los seres vivos tienen otras características, además de las anteriores, que les son propias. Entre ellas podemos citar las siguientes:
 
-## *1. Organización y Complejidad* 
+## *1. Organización y Complejidad*
 
 Tal como lo expresa la **TEORÍA CELULAR** (uno de los conceptos unificadores de la biología) la unidad estructural de todos los organismos es la **CÉLULA**. La célula en sí tiene una organización específica, todas tienen tamaño y formas características por las cuales pueden ser reconocidas.
 
 Algunos organismos estás formados por una sola célula, llamados **unicelulares**, en contraste, los organismos complejos son **multicelulares**, en ellos los procesos biológicos dependen de la acción coordinada de las células...
 
-## *2. Crecimiento y desarrollo* 
+## *2. Crecimiento y desarrollo*
 
 En algún momento de su ciclo de vida TODOS los organismos crecen. En sentido biológico, **crecimiento** es el aumento del tamaño celular, del número de células o de ambas. Aún los organismos unicelulares crecen, las bacterias duplican su tamaño antes de dividirse nuevamente. El crecimiento puede durar toda la vida del organismo como en los árboles, o restringirse a cierta etapa y hasta cierta altura, como en la mayoría de los animales.
 
