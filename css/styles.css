@@ -1,3 +1,4 @@
+
 /*** GENERAL ***/
 
 html {
@@ -14,8 +15,13 @@ body {
   position: relative;
 }
 
+a {
+  color: #AB3B61;
+}
+
 a:hover {
   text-decoration: none;
+  color: #707477;
 }
 
 p {
@@ -38,7 +44,7 @@ p {
 
 .title-home {
   font-weight: bold;
-  font-size: 42px;
+  font-size: 56px;
   color: #F9F9FA;
   color: #123D6A;
 }
@@ -55,7 +61,7 @@ p {
   border: 1px solid transparent;
   padding: .75rem 1.25rem;
   cursor: pointer;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-weight: bold;
   transition: all 0.5s;
 }
@@ -129,20 +135,6 @@ p {
   background: rgba(153, 80, 37, 0.55);
 }
 
-/* BACK TO HOME */
-
-.back-to-home {
-  margin-bottom: 15px;
-  font-size: 16px;
-  display: flex;
-  font-weight: bold;
-  align-items: center;
-}
-
-.back-to-home__text {
-  padding-left: 12px;
-}
-
 /* TITLE COURSE */
 
 .icon-course-sidebar {
@@ -211,11 +203,10 @@ p {
 .item-title-container {
   display: flex;
   /* align-items: center; */
-  /* padding: 0 0 0 15px; */
+  padding: 0 15px;
 }
 
 .item-title__number {
-  /* border: 2px solid #f8f9fa; */
   min-height: 30px;
   min-width: 30px;
   max-height: 30px;
@@ -224,11 +215,12 @@ p {
   justify-content: start;
   align-items: flex-start;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .item-title__text {
-  padding: 0 15 0 5px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 /* CONTENT COURSE */
