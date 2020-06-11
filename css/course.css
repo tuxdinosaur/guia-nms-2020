@@ -1,11 +1,53 @@
-/* HEADER */
 
-.header__title-course {
-  font-size: 32px;
+/* HEADER */
+.header-course {
+  background: #3B3B3B;
+  background: #ECECEC;
+  color: #ECECEC;
+  color: #123D6A;
 }
 
+.header__chapter-course {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header__title-course {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* CONTENT */
+.content__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content__body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- MEDIA QUERIES --- */
+
 @media (min-width: 768px){
-  .header__title-course {
+
+  /* HEADER */
+  .header__chapter-course {
     font-size: 56px;
+  }
+  .header__title-course {
+    font-size: 42px;
+  }
+
+  /* CONTENT */
+  .content__title {
+    font-size: 26px;
+  }
+  .content__body{
+    font-size: 18px;
   }
 }
