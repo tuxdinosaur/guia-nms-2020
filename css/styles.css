@@ -258,23 +258,24 @@ p {
   }
 }
 
-@media (min-width: 576px){
+/* @media (min-width: 576px){
   .container, .container-sm {
     max-width: none;
   }
-}
+} */
 
 @media (min-width: 768px){
-  .container, .container-md, .container-sm {
+  /* .container, .container-md, .container-sm {
       max-width: none;
-  }
+  } */
   .icon-home {
     font-size: 64px;
   }
 }
 
+/* 
 @media (min-width: 992px){
   .container, .container-lg, .container-md, .container-sm {
     max-width: 1200px;
   }
-}
+} */
