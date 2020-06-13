@@ -14,21 +14,22 @@
 
 .header__title-course {
   font-size: 24px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  /* font-family: 'Inter', sans-serif; */
 }
 
 /* CONTENT */
 .content__title {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .content__body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
 /* --- MEDIA QUERIES --- */
@@ -48,6 +49,6 @@
     font-size: 26px;
   }
   .content__body{
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 }
