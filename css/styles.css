@@ -44,7 +44,7 @@ p {
 
 .title-home {
   font-weight: bold;
-  font-size: 56px;
+  font-size: 28px;
   color: #F9F9FA;
   color: #123D6A;
 }
@@ -244,14 +244,9 @@ p {
   padding-bottom: 18px;
 }
 
-/* MEDIA QUERIES */
+/* --- MEDIA QUERIES --- */
 
 @media only screen and (max-width: 768px) {
-
-  .title-home {
-    font-size: 28px;
-  }
-
   /* CONTENIDO CURSO */
   .title-course {
     font-size: 24px;
@@ -268,14 +263,17 @@ p {
   /* .container, .container-md, .container-sm {
       max-width: none;
   } */
+  .title-home {
+    font-size: 56px;
+  }
   .icon-home {
     font-size: 64px;
   }
 }
 
-/* 
+
 @media (min-width: 992px){
   .container, .container-lg, .container-md, .container-sm {
-    max-width: 1200px;
+    max-width: 800px;
   }
-} */
+}
